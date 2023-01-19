@@ -34,3 +34,23 @@ print ("Model parameters: %s" % fp1)
 print (residuals)
 
 f1 = sp.poly1d(fp1)
+fx = sp.linspace(0, x[-1], 1000)
+plt.plot(fx, f1(fx), linewidth=4)
+plt.legend(["d=%i" % f1.order], loc="upper left")
+plt.show()
+
+#fit the data with a polynomial
+fp2, residuals, rank, sv, rcond = sp.polyfit(x, y, 2, full=True)
+print ("Model parameters: %s" % fp2)
+print (residuals)
+
+f2 = sp.poly1d(fp2)
+
+plt.plot(fx, f2(fx), linewidth=4)
+plt.legend(["d=%i" % f2.order], loc="upper left")
+plt.show()
+
+#fit the data with a polynomial
+fp3, residuals, rank, sv, rcond = sp.polyfit(x, y, 3, full=True)
+print ("Model parameters: %s" % fp3)
+print (residuals)
