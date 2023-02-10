@@ -14,6 +14,6 @@ ggplot(data = diamonds) +
   geom_bar(mapping = aes(x = color, fill = cut)) +
   facet_wrap(~cut)
 
-bookings <- read.csv("hotel_bookings.csv")
+library(ggplot2)
 ggplot(data = bookings) +
   geom_bar(mapping = aes(x = distribution_channel))
