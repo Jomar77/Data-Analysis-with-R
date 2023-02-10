@@ -13,3 +13,7 @@ ggplot(data = penguins, aes(x =flipper_length_mm,y=body_mass_g)) +
 ggplot(data = diamonds) +
   geom_bar(mapping = aes(x = color, fill = cut)) +
   facet_wrap(~cut)
+
+bookings <- read.csv("hotel_bookings.csv")
+ggplot(data = bookings) +
+  geom_bar(mapping = aes(x = distribution_channel))
