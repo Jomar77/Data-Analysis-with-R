@@ -1,33 +1,34 @@
-Age Demographics Data Analysis Project
-Overview
-This project aims to analyze data on age demographics and explore patterns and trends in the data. The goal is to gain insights that can inform decisions and strategies related to age-related issues.
+# Data Analysis with R Programming
+This repository contains R files for data analysis exercises as part of the Google Data Analytics Professional certificate. These exercises are designed to help you gain practical experience with the R programming language and its various libraries for data manipulation, visualization, and analysis.
 
-Data
-The data used in this project will be sourced from publicly available datasets, such as the US Census Bureau and the World Health Organization. The datasets will include information on population demographics, age-related health statistics, and other relevant data.
+## Getting Started
+To get started, you will need to have the following software installed on your computer:
 
-Analysis
-The data will be cleaned and preprocessed as necessary before being analyzed. The analysis will include descriptive statistics, visualizations, and statistical modeling. The analysis will focus on identifying patterns and trends in the data and uncovering insights that can inform decisions and strategies related to age-related issues.
+- [R](https://cran.r-project.org/bin/windows/base/)
+- [RStudio](https://posit.co/download/rstudio-desktop/)
 
-Results
-The results of the analysis will be presented in the form of a report and/or a presentation, depending on the audience and purpose of the project. The report and/or presentation will include a summary of the key findings, data visualizations, and any relevant recommendations or next steps.
 
-Requirements
-Python 3.x
-Pandas, numpy, matplotlib, seaborn, sklearn
-Jupyter notebook
-Usage
-Clone the repository
-Copy code
-git clone https://github.com/username/age-demographics-data-analysis.git
-Install the required packages
-Copy code
-pip install -r requirements.txt
-Run the jupyter notebook
-Copy code
-jupyter notebook age_demographics_data_analysis.ipynb
-Follow the instructions on the notebook and run the cells to reproduce the analysis.
-Contributing
-If you would like to contribute to this project, please fork the repository and make a pull request with your changes.
+Once you have R and RStudio installed, you can download this repository and open the R files in RStudio to start working through the exercises.
 
-Acknowledgements
-This project would not have been possible without the data provided by the US Census Bureau and the World Health Organization.
+## File Structure
+The repository contains the following R files:
+
+**Penguins.R** : Demonstrates the basics of R Programming
+**Bookings.R** : An exercise which uses the skills learned in penguins
+**ggplot2.R** : Introduces data viz in R
+
+## Libraries Used
+The following libraries are used in these exercises:
+
+- dplyr: For data manipulation
+- ggplot2: For data visualization
+- tidyr: For data wrangling
+
+You may need to install these libraries if you do not have them already installed on your computer. You can install them by running the following code in the R console:
+
+```
+install.packages(c("dplyr", "ggplot2", "tidyr"))
+```
+
+## Conclusion
+This repository provides a hands-on approach to learning data analysis with R programming and is intended to help you gain practical experience with the tools and techniques used in the field of data analytics. By working through the exercises in this repository, you will become proficient in using R for data analysis and be well on your way to achieving your Google Data Analytics Professional certificate.
