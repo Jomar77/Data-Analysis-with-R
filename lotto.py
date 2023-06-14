@@ -2,6 +2,8 @@
 # limit the numbers genereated to 1-40
 # 6 numbers per entry
 # last number must only be from 1-10
+# pick if left or right skewed
+
 
 import random
 import math
@@ -17,11 +19,11 @@ def main():
         for j in range(6):
             # generate a random number between 1 and 40
             num = math.ceil(random.gauss(20, 10))
-            # if the number is less than 1 or greater than 40, generate a new number
+            # if the number is less than 1 or greater than 40, generate a new number. pick if left skewed or right skewed
             while num < 1 or num > 40:
                 num = math.ceil(random.gauss(20, 10))
             print(num, end=" ")
-        # generate the last number between 1 and 10
+            # generate the last number between 1 and 10
         num = math.ceil(random.gauss(5, 2))
         # if the number is less than 1 or greater than 10, generate a new number
         while num < 1 or num > 10:
