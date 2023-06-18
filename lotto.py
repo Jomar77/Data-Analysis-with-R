@@ -1,34 +1,56 @@
-#random number generator that relies on normal distribution
-# limit the numbers genereated to 1-40
-# 6 numbers per entry
-# last number must only be from 1-10
-# pick if left or right skewed
-
-
 import random
 import math
 
 def main():
     print("Welcome to the Lottery numbers generator")
-    # get the number of entries
     num_entries = int(input("How many entries would you like? "))
     print()
-    # get the numbers for each entry
+    
     for i in range(num_entries):
         print("Entry", i+1, end=": ")
+        
+        skewness = input("Enter 'left' for left skewness or 'right' for right skewness: ")
+        mean = 20
+        std_dev = 10
+        meanLeft =[11,12,13,14,15,16]
+        meanRight =[24,25,26,27,28,29]
+        
+        if skewness.lower() == 'left':
+            mean = random.choice(meanLeft)
+        elif skewness.lower() == 'right':
+            mean = random.choice(meanRight)
+        
+        numarr = []
         for j in range(6):
-            # generate a random number between 1 and 40
-            num = math.ceil(random.gauss(20, 10))
-            # if the number is less than 1 or greater than 40, generate a new number. pick if left skewed or right skewed
+            #num should not be repeated
+            num = math.ceil(random.gauss(mean, std_dev))
+    
+            #check if num is already in the array, then append it
+            
             while num < 1 or num > 40:
-                num = math.ceil(random.gauss(20, 10))
-            print(num, end=" ")
-            # generate the last number between 1 and 10
+                num = math.ceil(random.gauss(mean, std_dev))
+                if check(num, numarr):
+                    break
+                numarr.append(num)
+                
+        print(len(numarr))
+        
+        for j in range(6):
+            print(numarr[j], end=" ")
+
         num = math.ceil(random.gauss(5, 2))
-        # if the number is less than 1 or greater than 10, generate a new number
+        
         while num < 1 or num > 10:
             num = math.ceil(random.gauss(5, 2))
+        
         print("Bonus:", num)
     print()
+
+#function that checks if the number is already in the array
+def check(num, numarr):
+    for i in range(len(numarr)):
+        if num == numarr[i]:
+            return True
+    return False
 
 main()
