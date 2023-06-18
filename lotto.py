@@ -27,30 +27,24 @@ def main():
     
             #check if num is already in the array, then append it
             
-            while num < 1 or num > 40:
+            while num < 1 or num > 40 or check(num, numarr):
                 num = math.ceil(random.gauss(mean, std_dev))
-                if check(num, numarr):
-                    break
-                numarr.append(num)
                 
-        print(len(numarr))
+            numarr.append(num)
+            print(numarr[j].sort(), end=" ")
         
-        for j in range(6):
-            print(numarr[j], end=" ")
 
         num = math.ceil(random.gauss(5, 2))
         
-        while num < 1 or num > 10:
+        while num < 1 or num > 10 or check(num, numarr):
             num = math.ceil(random.gauss(5, 2))
         
         print("Bonus:", num)
     print()
 
-#function that checks if the number is already in the array
+#recursive function that checks if the number is already in the array
 def check(num, numarr):
-    for i in range(len(numarr)):
-        if num == numarr[i]:
-            return True
-    return False
+    return num in numarr
+
 
 main()
