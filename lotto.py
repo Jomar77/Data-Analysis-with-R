@@ -12,8 +12,8 @@ def main():
         skewness = input("Enter 'left' for left skewness or 'right' for right skewness: ")
         mean = 20
         std_dev = 10
-        meanLeft =[11,12,13,14,15,16]
-        meanRight =[24,25,26,27,28,29]
+        meanLeft =[11,9,13,17,15]
+        meanRight =[24,22,26,20]
         
         if skewness.lower() == 'left':
             mean = random.choice(meanLeft)
@@ -31,10 +31,10 @@ def main():
                 num = math.ceil(random.gauss(mean, std_dev))
                 
             numarr.append(num)
-            print(numarr[j].sort(), end=" ")
+            print(numarr[j], end=" ")
         
 
-        num = math.ceil(random.gauss(5, 2))
+        num = math.ceil(random.gauss(5, 3))
         
         while num < 1 or num > 10 or check(num, numarr):
             num = math.ceil(random.gauss(5, 2))
