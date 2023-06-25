@@ -48,3 +48,12 @@ def check(num, numarr):
 
 
 main()
+
+
+
+
+
+def gradepredictor():
+    #create nested if expression for each grade for excel sheet
+
+    
