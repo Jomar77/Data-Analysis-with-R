@@ -1,56 +1,30 @@
-import scipy as sp
-import numpy as np
-import matplotlib.pyplot as plt
-import matplotlib as mpl
-import matplotlib.cm as cm
+import cv2
+import mediapipe as mp
+
+cap = cv2.VideoCapture(0)
+mpHands = mp.solutions.hands
+hands = mpHands.Hands()
+mpDraw = mp.solutions.drawing_utils
 
 
-#create a data analysis project on age demographics
+while True:
+    success, image = cap.read()
+    imageRGB = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
+    results = hands.process(imageRGB)
 
-#read in the data
-data = sp.genfromtxt("web_traffic.tsv", delimiter="\t")
+    # checking whether a hand is detected
+    if results.multi_hand_landmarks:
+        for handLms in results.multi_hand_landmarks: # working with each hand
+            for id, lm in enumerate(handLms.landmark):
+                h, w, c = image.shape
+                cx, cy = int(lm.x * w), int(lm.y * h)
 
-#split the data into x and y
-x = data[:,0]
-y = data[:,1]
+                if id == 4:
+                    cv2.circle(image, (cx, cy), 15, (255, 0, 255), cv2.FILLED)
 
-#clean the data
-x = x[~sp.isnan(y)]
-y = y[~sp.isnan(y)]
+                    mpDraw.draw_landmarks(image, handLms, mpHands.HAND_CONNECTIONS)
 
-#plot the data
-plt.scatter(x,y)
-plt.title("Web traffic over the last month")
-plt.xlabel("Time")
-plt.ylabel("Hits/hour")
-plt.xticks([w*7*24 for w in range(10)], ['week %i' % w for w in range(10)])
-plt.autoscale(tight=True)
-plt.grid()
-plt.show()
 
-#fit the data with a polynomial
-fp1, residuals, rank, sv, rcond = sp.polyfit(x, y, 1, full=True)
-print ("Model parameters: %s" % fp1)
-print (residuals)
+    cv2.imshow("Image", image)
+    cv2.waitKey(1)
 
-f1 = sp.poly1d(fp1)
-fx = sp.linspace(0, x[-1], 1000)
-plt.plot(fx, f1(fx), linewidth=4)
-plt.legend(["d=%i" % f1.order], loc="upper left")
-plt.show()
-
-#fit the data with a polynomial
-fp2, residuals, rank, sv, rcond = sp.polyfit(x, y, 2, full=True)
-print ("Model parameters: %s" % fp2)
-print (residuals)
-
-f2 = sp.poly1d(fp2)
-
-plt.plot(fx, f2(fx), linewidth=4)
-plt.legend(["d=%i" % f2.order], loc="upper left")
-plt.show()
-
-#fit the data with a polynomial
-fp3, residuals, rank, sv, rcond = sp.polyfit(x, y, 3, full=True)
-print ("Model parameters: %s" % fp3)
-print (residuals)
