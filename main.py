@@ -24,7 +24,10 @@ while True:
 
                     mpDraw.draw_landmarks(image, handLms, mpHands.HAND_CONNECTIONS)
 
-
+    h, w = image.shape[0:2]
+    neww = 1000
+    newh = int(neww*(h/w))
+    image = cv2.resize(image, (neww, newh))
     cv2.imshow("Image", image)
     cv2.waitKey(1)
 
