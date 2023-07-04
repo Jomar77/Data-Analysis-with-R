@@ -1,10 +1,22 @@
 import cv2
 import mediapipe as mp
+from comtypes import CLSCTX_ALL
+from pycaw.pycaw import AudioUtilities, IAudioEndpointVolume
 
 cap = cv2.VideoCapture(0)
 mpHands = mp.solutions.hands
 hands = mpHands.Hands()
 mpDraw = mp.solutions.drawing_utils
+
+
+devices = AudioUtilities.GetSpeakers()
+interface = devices.Activate(
+    IAudioEndpointVolume._iid_, CLSCTX_ALL, None)
+volume = interface.QueryInterface(IAudioEndpointVolume)
+# volume.GetMute()
+# volume.GetMasterVolumeLevel()
+print(volume.GetVolumeRange())
+volume.SetMasterVolumeLevel(-20.0, None)
 
 
 while True:
