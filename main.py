@@ -44,5 +44,3 @@ while True:
     image = cv2.resize(image, (neww, newh))
     cv2.imshow("Image", image)
     cv2.waitKey(1)
-
-asdf
