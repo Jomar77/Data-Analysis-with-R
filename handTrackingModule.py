@@ -3,16 +3,16 @@ import mediapipe as mp
 import time
 import math
 
-
 class handDetector():
-    def __init__(self, mode=False, maxHands=2, detectionCon=0.5, trackCon=0.5):
+    def __init__(self, mode=False, maxHands=2, modelC = 1,detectionCon=0.5, trackCon=0.5):
         self.mode = mode
         self.maxHands = maxHands
         self.detectionCon = detectionCon
         self.trackCon = trackCon
+        self.modelC = modelC
 
         self.mpHands = mp.solutions.hands
-        self.hands = self.mpHands.Hands(self.mode, self.maxHands,self.detectionCon, self.trackCon)
+        self.hands = self.mpHands.Hands(self.mode, self.maxHands,self.modelC, self.detectionCon, self.trackCon)
         self.mpDraw = mp.solutions.drawing_utils
         self.tipIds = [4, 8, 12, 16, 20]
 
@@ -90,25 +90,27 @@ class handDetector():
         return length, img, [x1, y1, x2, y2, cx, cy]
 
 
-    def main():
-        pTime = 0
-        cap = cv2.VideoCapture(1)
-        detector = handDetector()
-        while True:
-            success, img = cap.read()
-            img = detector.findHands(img)
-            lmList = detector.findPosition(img)
-            if len(lmList) != 0:
-                print(lmList[4])
+def main():
+    pTime = 0
+    cap = cv2.VideoCapture(1)
+    detector = handDetector()
+    while True:
+        success, img = cap.read()
+        img = detector.findHands(img)
+        lmList = detector.findPosition(img)
+        if len(lmList) != 0:
+            print(lmList[4])
 
-            cTime = time.time()
-            fps = 1 / (cTime - pTime)
-            pTime = cTime
+        cTime = time.time()
+        fps = 1 / (cTime - pTime)
+        pTime = cTime
 
-            cv2.putText(img, str(int(fps)), (10, 70), cv2.FONT_HERSHEY_PLAIN, 3,
-                        (255, 0, 255), 3)
+        cv2.putText(img, str(int(fps)), (10, 70), cv2.FONT_HERSHEY_PLAIN, 3,
+                    (255, 0, 255), 3)
 
-            cv2.imshow("Image", img)
-            cv2.waitKey(1)
+        cv2.imshow("Image", img)
+        cv2.waitKey(1)
 
-e
+
+if __name__ == "__main__":
+    main()
