@@ -12,13 +12,16 @@ def main():
         skewness = input("Enter 'left' for left skewness or 'right' for right skewness: ")
         mean = 20
         std_dev = 10
-        meanLeft =[11,9,13,17,15]
-        meanRight =[24,22,26,20]
+        meanLeft =[13,17,15]
+        meanRight =[21,23,25]
         
         if skewness.lower() == 'left':
             mean = random.choice(meanLeft)
         elif skewness.lower() == 'right':
             mean = random.choice(meanRight)
+        else:
+            print("Invalid input")
+            return
         
         numarr = []
         for j in range(6):
