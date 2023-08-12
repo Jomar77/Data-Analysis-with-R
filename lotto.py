@@ -23,6 +23,7 @@ def main():
             print("Invalid input")
             return
         
+        
         numarr = []
         for j in range(6):
             #num should not be repeated
