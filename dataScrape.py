@@ -7,7 +7,6 @@ for month in range(12):
 
     # URL of the website you want to scrape
     url = "http://lottoresults.co.nz/lotto/" + months[month] +"-2023"
-    print(url)
 
     # Send an HTTP GET request to the URL
     response = requests.get(url)
@@ -38,6 +37,7 @@ def delete_even_lines(file_path):
         lines = original_file.readlines()
 
     new_lines = [line for index, line in enumerate(lines, start=1) if index % 2 == 1]
+    new_lines = tuple(new_lines)
 
     with open(file_path, 'w') as new_file:
         new_file.writelines(new_lines)

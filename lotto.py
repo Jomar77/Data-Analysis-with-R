@@ -55,19 +55,21 @@ def main():
 def check(num, numarr):
     return num in numarr
 
-#check if the number is already in the text file
-def checkFile(num):
-    file = open("lotto.txt", "r")
-    for line in file:
-        if line == num:
+def checkNumbersInFile(numbers, file_path):
+    with open(file_path, 'r') as file:
+        lines = file.readlines()
+
+    cleaned_lines = [line.strip() for line in lines]
+    
+    for num in numbers:
+        if num in cleaned_lines:
             return True
+
     return False
 
+numbers_to_check = tuple(['6', '23', '25', '27', '28', '32'])  # List of numbers you want to check
+file_path = 'lotto.txt'  # Path to the text file
 
-
-main()
-numlist = []
-for i in range(6):
-    numlist.append(input("Enter a number: "))
-print(numlist)
-print(checkFile(numlist))
+result = checkNumbersInFile(numbers_to_check, file_path)
+print(numbers_to_check)
+print(result)
