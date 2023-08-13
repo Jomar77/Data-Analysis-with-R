@@ -44,11 +44,25 @@ def main():
             num = math.ceil(random.gauss(5, 2))
         
         print("Bonus:", num)
+
+        
+        if checkFile(str(numarr)):
+            print("This entry already exists")
+            break
+
     print()
 
 #recursive function that checks if the number is already in the array
 def check(num, numarr):
     return num in numarr
+
+#check if the number is already in the text file
+def checkFile(num):
+    file = open("lotto.txt", "r")
+    for line in file:
+        if line == num:
+            return True
+    return False
 
 
 main()
