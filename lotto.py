@@ -10,10 +10,9 @@ def main():
         print("Entry", i+1, end=": ")
         
         skewness = input("Enter 'left' for left skewness or 'right' for right skewness: ")
-        mean = 20
         std_dev = 10
-        meanLeft =[13,17,15]
-        meanRight =[21,23,25]
+        meanLeft =[12,16]
+        meanRight =[20,24]
         
         if skewness.lower() == 'left':
             mean = random.choice(meanLeft)
@@ -45,7 +44,7 @@ def main():
         
         print("Bonus:", num)
 
-        
+        print(numarr)
         if checkFile(str(numarr)):
             print("This entry already exists")
             break
@@ -65,4 +64,10 @@ def checkFile(num):
     return False
 
 
+
 main()
+numlist = []
+for i in range(6):
+    numlist.append(input("Enter a number: "))
+print(numlist)
+print(checkFile(numlist))

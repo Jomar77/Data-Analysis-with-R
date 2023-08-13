@@ -33,4 +33,18 @@ for month in range(12):
             #write additional lines, don't overwrite
             f.write("%s\n" % item)
 
+def delete_even_lines(file_path):
+    with open(file_path, 'r') as original_file:
+        lines = original_file.readlines()
+
+    new_lines = [line for index, line in enumerate(lines, start=1) if index % 2 == 1]
+
+    with open(file_path, 'w') as new_file:
+        new_file.writelines(new_lines)
+
+file_path = 'lotto.txt'
+delete_even_lines(file_path)
+
+        
+
 
