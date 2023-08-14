@@ -23,28 +23,14 @@ for month in range(12):
         # create list and seperate the list into tuples of 6
         list.append(title.text.strip())
 
-    list = [list[i:i+6] for i in range(0, len(list), 6)]
+   #seperate the list into tuples of 6
+    list = [tuple(list[i:i+6]) for i in range(0, len(list), 6)]
 
+    #write it in a csv file
+    import csv
+    with open('lotto.csv', 'a', newline='') as csvfile:
+        writer = csv.writer(csvfile)
+        writer.writerows(list)
 
-    #put this into a text file
-    with open('lotto.csv', 'a') as f:
-        for item in list:
-            #write additional lines, don't overwrite
-            f.write("%s\n" % item)
-
-def delete_even_lines(file_path):
-    with open(file_path, 'r') as original_file:
-        lines = original_file.readlines()
-
-    new_lines = [line for index, line in enumerate(lines, start=1) if index % 2 == 1]
-    new_lines = tuple(new_lines)
-
-    with open(file_path, 'w') as new_file:
-        new_file.writelines(new_lines)
-
-file_path = 'lotto.txt'
-delete_even_lines(file_path)
-
-        
-
-
+    #print the list
+    print(list)
