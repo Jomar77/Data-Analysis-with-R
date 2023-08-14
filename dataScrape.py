@@ -27,7 +27,7 @@ for month in range(12):
 
 
     #put this into a text file
-    with open('lotto.txt', 'a') as f:
+    with open('lotto.csv', 'a') as f:
         for item in list:
             #write additional lines, don't overwrite
             f.write("%s\n" % item)
