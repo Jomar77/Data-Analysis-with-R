@@ -32,5 +32,24 @@ for month in range(12):
         writer = csv.writer(csvfile)
         writer.writerows(list)
 
-    #print the list
-    print(list)
+    #remove the even lines
+import csv
+
+input_file = 'lotto.csv'
+output_file = 'output.csv'
+
+with open(input_file, 'r') as infile, open(output_file, 'w', newline='') as outfile:
+    reader = csv.reader(infile)
+    writer = csv.writer(outfile)
+    
+    for i, row in enumerate(reader, start=1):
+        if i % 2 == 0:
+            # Delete content from even-numbered lines
+            row = [''] * len(row)
+            
+        # Check if any element in the row is non-empty
+        if any(cell.strip() for cell in row):
+            writer.writerow(row)
+
+print("Empty lines removed from even-numbered lines.")
+

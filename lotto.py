@@ -55,21 +55,23 @@ def main():
 def check(num, numarr):
     return num in numarr
 
-def checkNumbersInFile(numbers, file_path):
-    with open(file_path, 'r') as file:
-        lines = file.readlines()
+import csv
+#checks if the entry already exists in the csv file
+import csv
 
-    cleaned_lines = [line.strip() for line in lines]
-    
-    for num in numbers:
-        if num in cleaned_lines:
-            return True
-
+def is_list_in_csv(check_list, csv_file_path):
+    with open(csv_file_path, 'r') as csvfile:
+        reader = csv.reader(csvfile)
+        for row in reader:
+            row_as_integers = [int(item) for item in row]  # Convert row items to integers
+            if set(check_list) <= set(row_as_integers):
+                return True
     return False
 
-numbers_to_check = tuple(['6', '23', '25', '27', '28', '32'])  # List of numbers you want to check
-file_path = 'lotto.txt'  # Path to the text file
+# Example usage
+my_list = [6,23,25,27,28,3]
+csv_file_path = 'output.csv'
 
-result = checkNumbersInFile(numbers_to_check, file_path)
-print(numbers_to_check)
-print(result)
+my_list_str = ','.join(map(str, my_list))
+
+print(is_list_in_csv(my_list, csv_file_path))
