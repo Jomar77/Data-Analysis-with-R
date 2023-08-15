@@ -9,14 +9,14 @@ def main():
     for i in range(num_entries):
         print("Entry", i+1, end=": ")
         
-        skewness = input("Enter 'left' for left skewness or 'right' for right skewness: ")
+        skewness = input("Enter 'l' for left skewness or 'r' for right skewness: ")
         std_dev = 10
-        meanLeft =[12,16]
-        meanRight =[20,24]
+        meanLeft =[14,17]
+        meanRight =[20,23]
         
-        if skewness.lower() == 'left':
+        if skewness.lower() == 'l':
             mean = random.choice(meanLeft)
-        elif skewness.lower() == 'right':
+        elif skewness.lower() == 'r':
             mean = random.choice(meanRight)
         else:
             print("Invalid input")
@@ -45,7 +45,7 @@ def main():
         print("Bonus:", num)
 
         print(numarr)
-        if checkFile(str(numarr)):
+        if checkFile(numarr):
             print("This entry already exists")
             break
 
@@ -58,7 +58,7 @@ def check(num, numarr):
 import csv
 
 
-List = ['6','23','25','27','28','32']
+
 #check if the list above is in the csv file
 
 def checkFile(List):
