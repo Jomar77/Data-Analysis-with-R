@@ -67,9 +67,10 @@ def checkFile(List):
         
         for line in csv_reader:
             print(line)
-            if line[1] == List:
+            
+            if line == List:
                 return True
     return False
 
 
-print(checkFile(List))
+main()
