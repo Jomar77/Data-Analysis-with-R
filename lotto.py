@@ -56,22 +56,20 @@ def check(num, numarr):
     return num in numarr
 
 import csv
-#checks if the entry already exists in the csv file
-import csv
 
-def is_list_in_csv(check_list, csv_file_path):
-    with open(csv_file_path, 'r') as csvfile:
-        reader = csv.reader(csvfile)
-        for row in reader:
-            row_as_integers = [int(item) for item in row]  # Convert row items to integers
-            if set(check_list) <= set(row_as_integers):
+
+List = ['6','23','25','27','28','32']
+#check if the list above is in the csv file
+
+def checkFile(List):
+    with open('output.csv', 'r') as csv_file:
+        csv_reader = csv.reader(csv_file)
+        
+        for line in csv_reader:
+            print(line)
+            if line[1] == List:
                 return True
     return False
 
-# Example usage
-my_list = [6,23,25,27,28,3]
-csv_file_path = 'output.csv'
 
-my_list_str = ','.join(map(str, my_list))
-
-print(is_list_in_csv(my_list, csv_file_path))
+print(checkFile(List))
