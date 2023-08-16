@@ -44,7 +44,7 @@ def main():
         
         print("Bonus:", num)
 
-        print(numarr)
+        
         if checkFile(numarr):
             print("This entry already exists")
             break
@@ -66,8 +66,6 @@ def checkFile(List):
         csv_reader = csv.reader(csv_file)
         
         for line in csv_reader:
-            print(line)
-            
             if line == List:
                 return True
     return False
