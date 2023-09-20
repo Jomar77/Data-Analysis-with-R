@@ -1,0 +1,116 @@
+Windows Subsystem for Linux 
+By Namal Balasuriya (MCS, BIT , MBCS, MCSSL, SCJP )
+namal.balasuriya@sit.ac.nzLesson Plan
+Introduction
+How to Enable WSL
+How to Start Powershell  as Administrator
+Installing Linux in WSL
+Setting WSL Version
+Starting WSL
+Writing Our First Bash Script
+Q&A
+2
+Introduction
+3
+Windows Subsystem forLinux (WSL) isafeature ofWindows that allows
+developers torunaLinux environment without needing aseparate virtual
+machine ordualbooting .
+There aretwoversions ofWSLnamely WSL1andWSL2.
+WSL1wasfirstreleased in2016 andacted asacompatibility layer forrunning
+Linux binary executables byimplementing Linux system calls ontheWindows
+kernel .
+WSL 1isavailable onWindows 10,Windows 11,Windows Server 2016,
+Windows Server 2019 andWindows Server 2022.Introduction Cont.
+4
+WSL2introduced important changes such asarealLinux kernel .
+WSL2differs from WSL1inthatWSL2runsinside amanaged virtual machine
+that implements thefullLinux kernel .Asaresult, WSL2iscompatible with
+more Linux binaries, asnotallsyscalls were implemented inWSL1.
+Since June 2019,WSL2hasbeen available toWindows 10customers through
+theWindows Insider program, including theHome edition .
+WSLisnotavailable toallWindows 10users bydefault .Itcanbeinstalled
+either byjoining theWindows Insider program orbymanual installation .Introduction Cont.
+5
+With WSL, youcan:
+Choose favourite GNU/Linux distributions (distros) from theMicrosoft Store .
+Runcommon command -linetools such asgrep, sed,andawk.
+RunBash scripts andGNU/Linux command -lineapplications including :
+•Tools :vim, emacs ,tmux
+•Languages :NodeJS ,JavaScript, Python, Ruby, C/C++, C#&F#,Rust, Go
+•Services :SSHD, MySQL, Apache, lighttpd ,MongoDB ,PostgreSQLIntroduction Cont.
+6
+Install additional software using your own GNU/Linux distribution package
+manager .
+Invoke Windows applications using aUnix-likecommand -lineshell.
+Invoke GNU/Linux applications onWindows .
+RunGNU/Linux graphical applications integrated directly intoyour Windows
+desktop .
+UseGPUacceleration formachine learning, data science scenarios andmore .How to Enable WSL
+7
+Tosetupandenabling WSLinvolves installing aLinux distribution alongside
+Windows 10.Butinawaythatallows thetwodifferent operating systems to
+interact with each other .
+Toinstall WSLonWindows, there isonerequirement tomeet .Youmust have a
+Windows 1064-bitcomputer Build 18917 orlater.
+WSLisacinch toenable .Nodownload isrequired .It’ssimply asingle Windows
+feature .Toenable WSL, open PowerShell asAdministrator and runthe
+following .Once complete, restart thecomputer .
+Enable -WindowsOptionalFeature -Online -FeatureName Microsoft -Windows -Subsystem -LinuxHow to Start Powershell  as Administrator
+8
+Click onthesearch boxatthetaskbar andtype powershell .Thisaction will
+bring upthePowerShell edition ofyour preference .
+Look forWindows PowerShell orjustPowerShell, ifusing PowerShell Core,
+from thesearch result .
+Right -click onthemenu item andselect Run asadministrator .
+Or
+Press Windows key+Rfrom thekeyboard .
+Then type powershell ontheRundialogue box.
+HitShift +Ctrl+Enter keystogether torunPowerShell inadministrator mode .Installing Linux in WSL
+9
+WSLdoes notinstall anyLinux distribution onitsown.
+First, open theMicrosoft Store and search for‘WSL’ .AlistofLinux
+distributions shows up.
+Next, choose your distribution ofchoice andinstall it.
+Following aresome ofthepopular distros available todownload andinstall .
+•Ubuntu 20.04LTS
+•Ubuntu 22.04LTS
+•OpenSUSE Leap 15.5
+•OpenSUSE Tumbleweed
+•SUSE Linux Enterprise Server 15SP4
+•SUSE Linux Enterprise Server 15SP5•KaliLinux Rolling
+•Debian GNU/Linux
+•Fedora Remix forWSL
+•Pengwin
+•Alpine WSL
+•…Setting WSL Version
+10
+Check available distributions online, type wsl--list--online .
+InaPowerShell console :
+1.Listwhich versions ofLinux youhave installed byrunning wsl-lorwsl--list.
+2.Once youhave thelist,copy thename ofthedistro youwant torunwith WSL2and
+runwsl--set-version <Distro> 2,replacing <Distro> with thename youcopied
+earlier .
+3.Confirm thecommand wassuccessful byrunning wsl-l-vorwsl--list--verbose .
+Thiscommand willreturn afulllistofWSLdistros andtheversion each distro is
+using .Starting WSL
+11
+Tostart using WSL, open aPowerShell terminal andtype wsl.
+Ifyou’ve setupWSLcorrectly, you’ll enter abash terminal running ontheWSL
+distro ofchoice .
+From here, youcanrunanyLinux commands youwish.Writing Our First Bash Script
+12
+Tostart using WSL, open aPowerShell terminal andtype wsl.
+Navigate totheWindows userdesktop using thecdcommand .
+Create anewdirectory with your firstname using themkdir command .
+Navigate tothenewly created directory .
+Type theeditor test.shcommand andhitEnter .
+Enter thefollowing code snippet andpress Ctrl+Oandthen Ctrl+Xtosave
+andexitfrom theeditor .Writing Our First Bash Script Cont.
+13
+Type the bash test.sh command and hit Enter.
+Input the First Name and Last Name and obtain the output. Let’s discuss…
+Q&A 
+Time for your questions and queries ...
+14
+Thank you!
+15

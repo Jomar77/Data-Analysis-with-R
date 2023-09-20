@@ -1,0 +1,369 @@
+Introduction to
+Operating Systems
+By Namal Balasuriya (MCS, BIT , MBCS, MCSSL, SCJP )
+namal.balasuriya@sit.ac.nz
+Lesson Plan
+Introduction to Operating Systems
+Functions of an Operating System
+Operating System Classifications
+Evolution of Operating Systems
+Q&A
+Additional Links
+Activity
+2
+Introduction to Operating Systems
+AnOperating System (OS)isasoftware thatmanages computer hardware and
+software resources andprovides common services forcomputer programs .
+OSactsasaninterface between computer hardware components andtheuser
+andother software .
+3
+Introduction to Operating Systems Cont.
+There aretwomain types ofSoftware .
+1.System Software
+2.Application Software
+OScomes under thecategory ofSystem Software .
+OSisthemain subtype ofSystem Software .
+Every device must have anOStomanage andcontrol itsoperations .
+It’sanessential software thatrunsinthebackground ofacomputer system .
+What aretheremaining software types under System Software???
+Device Drivers, Firmware, Programming Language Translators, Utilities 4
+Introduction to Operating Systems Cont.
+Kernel
+Kernel isthecore component ofanoperating system .
+Itmanages operations ofcomputer hardware andperforms
+tasks such asmemory and CPU time management, disk
+management, taskmanagement, etc.
+Kernel acts asabridge between application programs and
+hardware -level data processing .
+Kernel loads firstintomemory when anoperating system is
+loaded andremains inmemory until theoperating system is
+shutdown again .5
+KernelTask 
+Management
+Time 
+ManagementInterrupt & 
+Event HandlingMemory 
+ManagementDevice I/O 
+ManagementSynchronization 
+& 
+CommunicationIntroduction to Operating Systems Cont.
+Shell
+Theshell istheouter layer oftheoperating
+system that manages the interaction
+between theuserandtheOS.
+Theshell communicates with theoperating
+system byeither taking input from theuser
+orashell script .
+Ashell script isasequence ofsystem
+commands thatarestored inafile.
+6
+User
+Shell (C Shell, K Shell)
+Kernel
+HardwareShell
+KernelUserIntroduction to Operating Systems Cont.
+User Mode VsKernel Mode
+These arethetwomodes ofanoperating system .
+When anapplication program isrunning thecomputer isinUser Mode .For
+example, writing adocument, reading aPDF ,browsing theinternet, etc.This
+mode haslimited access tothehardware .So,itisalsocalled lessprivileged
+mode, slave mode, orrestricted mode .
+When theprocess isinUser Mode andrequires anyhardware resource, that
+request issent tothekernel .Then thecomputer enters Kernel Mode from
+User Mode which isalsocalled privileged mode orsystem mode .
+Thistransition isknown as“context switching ”.
+7
+Introduction to Operating Systems Cont.
+User Mode VsKernel Mode
+8
+Functions of an Operating System
+Device Management 
+Processor Management 
+Memory Management
+Input / Output Management
+Interrupt Handling
+File Management
+Storage Management
+Security Management
+User & Privilege Management
+Human Computer Interface (HCI)9
+Functions of an Operating System Cont. 
+Device Management
+AnOperating System manages device communication using respective drivers .
+Adevice driver isaprogram thatcontrols theoperation ofaspecific type of
+device .Itprovides theinterface fortheOSthat allows interaction with the
+device .
+10
+Functions of an Operating System Cont. 
+Device Management Cont.
+Thefollowing activities areperformed bytheoperating system fordevice
+management .
+•Allocates andde-allocates devices todifferent processes .
+•Keeps records ofthedevices .
+•Decides which process canusewhich device forhowmuch time.
+11
+Functions of an Operating System Cont. 
+Processor Management / Scheduling
+Theoperating system controls theorder inwhich processes have access tothe
+processor anddetermine theprocessing time that each process must stayin
+theprocessor .Thisiscalled process scheduling .
+Activities performed bytheoperating system inprocessor management .
+•Keeping track ofthestatus ofprocesses using aprogram called Traffic
+Controller .
+•Allocating andde-allocating theprocessor when itisnotrequired .
+12
+Functions of an Operating System Cont. 
+Processor Management / Scheduling  Cont.
+Multiprogramming VsMultitasking
+Executing more than one program inasingle processor iscalled multi -
+programming .Multiprogramming organises thejobs inthemain memory to
+increase CPUutilization .
+Running ofmore than onetasksimultaneously inthesystem iscalled multi -
+tasking .Eg:Typing inadocument while theprinting process isrunning .In
+multitasking, theCPU isassigned toaprocess foraspecified duration
+called time slice, after thistime period, theCPU isswitched toanother
+process .
+13
+Functions of an Operating System Cont. 
+Memory Management
+Theoperating system controls themain memory which isalsocalled primary
+memory .
+Main memory isastorage area thatcanbeaccessed directly bytheCPU.The
+program(s) thatneeds tobeexecuted should remain inthemain memory .
+OSrunsamemory manager program that...
+•Keeps track ofallocated memory portions
+•Maps memory toeach process
+•Controls howmuch memory toallocate toeach process
+•Determines when aportion ofmemory should beavailable foraprocess14
+Functions of an Operating System Cont. 
+Input / Output Management
+Controlling input andoutput devices isamain roleofanoperating system .
+TheOSmanages I/Odevices inmany ways…
+•Itrecords which device requires processor time sothattheprocessor can
+communicate with thedevice without anyconflicts .
+•Itprioritises processes based oncontrol signals thattheI/Odevice sends
+andreceives .
+•IfanI/Odevice makes amore critical request than what iscurrently
+being executed, theOScaninterrupt what iscurrently being executed
+andswap tothemore important task. 15
+Functions of an Operating System Cont. 
+Interrupt Handling
+Aninterrupt isasignal that issent totheprocessor torequest immediate
+attention .When theprocessor receives thisrequest, itsuspends what itis
+doing andrunstheprocess associated with theinterrupt .
+Theprocessor canbeinterrupted foranumber ofreasons, including :
+•Ahardware device hassignaled thatithasdata toprocess
+•Ahardware device hascompleted ataskthatitwasasked todo
+•Asoftware process needs aservice tobeprovided orasOSfunction tobe
+performed
+•Anallocated amount oftime hasexpired, and action needs tobe
+performed
+•Ahardware failure hasoccurred andneeds tobeaddressed16
+Functions of an Operating System Cont. 
+File Management
+Filesystem isorganised indirectories foreasy navigation andefficient usage .
+OScontrols filemanagement activities .
+•Keeping track ofwhere thefiles arestored, useraccess settings, andthe
+status offiles, etc.
+•Keeping track ofinformation regarding thecreation, deletion, transfer,
+copy, andstorage offilesinanorganised way.
+•Maintaining theintegrity ofthedata stored inthefiles, including thefile
+directory structure, byprotecting against unauthorised access .
+17
+Functions of an Operating System Cont. 
+Storage Management
+Thisrefers toallnon-volatile memory storage device management .
+TheOSisincharge ofkeeping track offilesandprograms which arestored so
+that they canbeaccessed quickly when they arerequested andtransferred
+intomain memory .
+Thisprocess …
+•Improves theperformance ofthedata storage resource andoptimises the
+useofstorage devices .
+•Assists instoring more data onhardware devices .
+•Speed upthedata retrieval process andprevents data losses .18
+Functions of an Operating System Cont. 
+Security Management 
+Theoperating system provides various techniques toensure theintegrity and
+confidentiality ofdata.
+OS includes security -specific utility software like Firewalls, Anti -Malware, and 
+Software Update checks.
+That gives…
+•Protection against unauthorised access.
+•Protection against interruption by keeping the firewall active.
+•Protecting the system memory against malicious access.
+•Displaying messages related to system vulnerabilities.19
+Functions of an Operating System Cont. 
+User & Privilege Management 
+Usually, OSprovides facilities tomanage thedifferent user accounts and
+control their behaviours onvarious activities .
+Because notallusers will getthesame opportunity towork with the
+functionalities given bytheOS.
+There aredifferent user account types like;Administrator, Backup Operator,
+Power User, User, etc.
+20
+Functions of an Operating System Cont. 
+Human Computer Interface (HCI)
+People don’t know themethod ofcommunicating with thehardware/devices, so
+OSgives theoption ofcommunicating with thecomputer with theinterfaces .
+Itdefines allthemethods ofhowpeople interact with thecomputer system .Ifthe
+interfaces aredifficult tointerpret itsmeaning, then users willfinditdifficult to
+understand anduse.
+HCIfocused oninterfaces between computers andpeople .
+Earlier days, OSarebased onthecommand line, andmodern operating systems
+arebased ongraphical nature .Meaning users willfeeleasytolearn andusetheOS
+functionalities .
+There isahighrelationship between HCIandUser Experience (UX).21
+Operating System Classifications
+22
+Two main types based on the numbers of users;
+1.Single -User OS
+2.Multi-User OS
+Two main types based on the user interfaces;
+1.Command Line Interface (CLI)
+2.Graphical User Interface (GUI)
+Two main types based on the licensing;
+1.Licensed OS (Proprietary OS)
+2.Open -Source OS
+Operating System Classifications Cont.
+23
+Following are the main types based on the processing method;
+1.Batch Processing OS
+2.Online or Real -time Processing OS
+3.Multi-programming OS
+4.Multi-processing OS
+5.Multi-tasking OS
+6.Multi-threading OS
+Following are the main types based on the use;
+1.Client OS
+2.Network OS & Server OS
+3.Embedded OSOperating System Classifications Cont.
+24
+Types based on the numbers of users:
+SINGLE -USER
+OPERATING SYSTEMSMULTI -USER
+OPERATING SYSTEMS
+A type of OS that provides facilities 
+to only one user at a time.A type of OS that provides resources 
+and services to multiple users at a
+time.
+Two Type s : Single User Single Task 
+OS & Single User Multi -Task OSMany Types such as Timesharing OS 
+& Distributed OS
+Eg: Windows, Apple Mac Eg: UNIX, LinuxOperating System Classifications Cont.
+25
+Types based on the user interfaces:
+GRAPHICAL USER INTERFACE COMMAND LINE INTERFACE
+A type of UI that allows users to interact with
+electronic devices through graphical icons 
+and visual indications.An interface for the user to issue commands 
+in the form of lines of text to perform the 
+tasks.
+Even beginner can easily handle.User should have a good knowledge of 
+commands.
+Require more memory. Doesn’t require more memory.
+Slower compared to CLI. Faster compared to GUI.
+Can customise to change the appearance. Not possible to change the appearance.
+More flexible. Not much flexible.Operating System Classifications Cont.
+26
+Types based on the licensing:
+OPEN -SOURCE OS PROPRIETARY OS
+Free of charge or lower cost. Need to pay higher cost.
+Can get the source code. Source code is not public.
+Can modify software. Cannot modify software.
+Caninstall freely. Require license.
+Rely on loyal and engaged online user 
+community for support.Vendor supplies the full support.Operating System Classifications Cont.
+27
+Types based on the processing method:
+•Multi -programming OS
+Twoormore programs areexecuted simultaneously inasingle processor .
+Thisisused inmultiuser environments .
+•Multi -processing OS
+Twoormore processors usetoexecute programs simultaneously .Servers are
+designed tousethisconcept .UNIX isamulti -processing operating system .Operating System Classifications Cont.
+28
+Types based on the processing method:
+•Multi -tasking OS
+Thecapability ofrunning several tasks orprograms atthesame time inthe
+system .Eg:Listening tomusic while browsing theinternet .Most modern OS
+likeWindows, MacOS, andLinux aremulti -tasking operating systems
+•Multi -threading OS
+Inmulti -threading processes aredivided intosub-processes called threads
+and executes them concurrently .This concept isused inmulti -tasking
+operating systems .Operating System Classifications Cont.
+29
+Types based on the processing method:
+GraphicsResponding 
+to 
+KeystrokesGrammar 
+Check
+Word ProcessorThread Thread Thread
+CPU
+Multi-ThreadingBrowser Excel Media Player
+Operating SystemProcess Process Process
+CPU
+Multi-TaskingOperating System Classifications Cont.
+30
+Types based on the processing method:
+•Batch Processing OS
+Thistype ofOSprocesses large amounts ofdata inbatches .Similar tasks are
+grouped intobatches toprocess together .Used byorganizations thatrequire
+high-volume data processing such asbanks .Eg:IBM's z/OS, Unisys MCP , and
+Burroughs MCP/BCS
+Operating System Classifications Cont.
+31
+Types based on the processing method:
+•Online orReal-time Processing OS
+Inthese systems, data isaccepted andprocessed inashort time orwithin a
+deadline .
+Eg:Airline Traffic Control Systems, Command Control Systems etc.Operating System Classifications Cont.
+32
+Types based ontheuse:
+•Client OS
+Client operating systems areinstalled indesktops orother portable devices
+likelaptops, tablets ,orsmartphones .Suitable forasingle -user system .
+Handles hardware components connected tothedevice such asprinters,
+monitors, etc.Client OScanrequest data from network servers ifnecessary .
+•Network OS&Server OS
+These aremore advanced versions ofoperating systems that runonserver
+computers .Server OSincludes facilities toprovide several services toclient
+machines andother devices .Thekeytask oftheNetwork OSproviding
+network services andsharing resources totheclients .Eg:Windows Server,
+MacOS ServerOperating System Classifications Cont.
+33
+Types based on the use:
+•Embedded OS
+These arespecialised operating systems designed toperform highly specific
+tasks ofdevices .Eg:Smart TV–Embedded OSofthedevice controls the
+microprocessor andother associated hardware .Evolution of Operating Systems
+34
+Let’s watch a small clip on this…
+https://www.youtube.com/watch?v=e -YI-fjI8Nc
+There are popular operating system brands and families such as Windows OS, Linux 
+OS, Mac OS, VMS, OS/400, iOS, Android, etc.
+But all of them have initially launched with basic features and matured with their 
+age over the years.
+Okey folks, time for a group activity. Find out more useful video resources on the 
+evolution of various OS brands and let's discuss more on them.Q&A 
+Time for your questions and queries ...
+35
+Additional Links
+https://learn.microsoft.com/en -us/windows/deployment/windows -
+autopatch/whats -new/windows -autopatch -whats -new-2023
+https://www.youtube.com/watch?v=wtjPc8nr2iE
+https://www.youtube.com/watch?v=OZowHEjWn0E
+https://www.youtube.com/watch?v=i -RLv4p6AYs
+https://macinfo.us/file -systems -mac-vs-windows -vs-linux/
+https://www.computerworld.com/article/3692451/evolution -of-ios.html#slide10
+https://setapp.com/news/best -features -of-macos -14-sonoma
+https://linuxmint.com/
+https://www.microsoft.com/en -nz/windows/windows -11-specifications#table136
+Activity
+Find out more OS options available for networked, distributed, and embedded 
+requirements with their pricing and features offered.
+List 3 security options that you use in the current context on your OS.
+Explore more about Windows Subsystem for Linux (WSL) and the available 
+distro.
+37
+Thank you!
+38

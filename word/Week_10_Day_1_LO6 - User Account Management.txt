@@ -1,0 +1,179 @@
+User Account Management
+By Namal Balasuriya (MCS, BIT , MBCS, MCSSL, SCJP )
+namal.balasuriya@sit.ac.nzLesson Plan
+User Accounts
+User Account Types
+Default User Accounts
+Local Users & Domain Users
+Creating & Managing User Accounts
+Managing User Groups
+Q&A
+2
+User Accounts
+3
+AUserAccount isacollection ofsettings andpermissions, specific toauser,
+thatdetermines what ausercanandcannot doonthecomputer .
+These settings arealsoused toprotect theuser’s filesandfolders from access
+byother non-authorised people .
+Auser account willdetermine thefiles andfolders auser canaccess &the
+changes ausercanmake tothecomputer .User Account Types
+4
+Administrator
+Members oftheAdministrators group areclassified asAdministrator accounts .
+Bydefault, theAdministrators group includes thefirst account youcreate
+when yousetupthecomputer andanaccount named Administrator that is
+disabled andhidden bydefault .
+Unlike other account types, administrators have fullcontrol over thesystem .
+Following arethetasks thatonlyadministrators canperform…
+Create, change, anddelete useraccounts andgroups
+Install anduninstall programs
+Configure automatic updating with Windows Update
+Install anActiveX controlUser Account Types Cont.
+5
+Install orremove hardware device drivers
+Share folders
+Setpermissions
+Access allfiles, including those inanother user's folder
+Take ownership offiles
+Copy ormove filesintothe%ProgramFiles %or%SystemRoot %folders
+Restore backed -upsystem files
+Grant rights toother useraccounts andtothemselves
+Configure Parental Controls
+Configure Windows FirewallUser Account Types Cont.
+6
+Standard User
+Members oftheUsers group areclassified asstandard Useraccount s.(In
+Windows XP ,Users’group members arecalled limited accounts .)
+Many tasks that were available only toadministrators inprevious Windows
+versions canbeperformed inWindows 7bystandard users .
+These additional tasks donotaffect overall system security, and their
+prohibition inWindows XPandWindows 2000 made itimpractical formost
+people torunwithout fulladministrative privileges inWindows 7asin
+Windows Vista itmakes sense touseastandard account .User Account Types Cont.
+7
+Apartial listoftasks available tostandard useraccounts includes…
+Change thepassword andpicture fortheir ownuseraccount
+Useprograms thathave been installed onthecomputer
+Install system anddriver updates using Windows Update
+Install approved ActiveX controls
+Configure asecure Wi-Ficonnection
+Refresh anetwork adapter andthesystem's IPaddress
+View permissions
+Create, change, anddelete files intheir document folders andinshared
+document folders
+Restore their ownbacked -upfilesUser Account Types Cont.
+8
+View thesystem clock andcalendar, andchange thetime zone
+Setpersonalisation options, such asThemes ,Desktop Background ,andsoon
+Select adisplay dots-per-inch(dpi)setting toadjust textsize
+Configure power options
+LogoninSafeMode
+View Windows Firewall settingsUser Account Types Cont.
+9
+Guest
+Members oftheGuests group areshown asGuestaccounts .
+Guest accounts have privileges likestandard accounts, with some limitations .
+Auser logged onwith theGuest account (butnotanyother account thatisa
+member oftheGuests group) cannot create apassword fortheaccount .Default User Accounts
+10
+Default User accounts orBuilt-inaccounts areaccounts that arecreated atthe
+time you install the operating system .When installed into aworkgroup
+environment, windows 7hasfouruseraccounts .
+1.Administrator
+•The Administrator account isthemost powerful local user account
+possible .
+•This account hasunlimited access andunrestricted privileges toevery
+aspect ofWindows .
+•TheAdministrator account canmanage allsecurity settings, other users,
+groups, theoperating system, printers, shares, andstorage devices .Default User Accounts Cont.
+11
+•Because ofthese far-reaching privileges, theAdministrator account must
+beprotected from misuse .
+•The Administrator account isdisabled bydefault inWindows 7.The
+password fortheAdministrator account isblank bydefault .
+•Toprotect theAdministrator account from misuse, itisdisabled bydefault
+inWindows 7.However, theAdministrator account isautomatically enabled
+when youenter Safe Mode sothatyoucanuseitfortroubleshooting .Safe
+Mode isaboot option youcanusewhen troubleshooting Windows .
+•TheAdministrator account cannot bedeleted andlocked outafter too
+many incorrect logon attempts .Default User Accounts Cont.
+12
+2.Guest
+•TheGuest account allows users toaccess thecomputer even ifthey donot
+have aunique username andpassword .
+•Itisoneoftheleast privileged useraccounts inWindows .
+•Ithasextremely limited access toresources andcomputer activities, andit
+isintended foroccasional usebylow-security users .Default User Accounts Cont.
+13
+3.Initial User
+•Theinitial useraccount iscreated during theinstallation .
+•Itusesthename oftheregistered user.
+•Bydefault, theinitial userisamember oftheAdministrators group .
+•These users areconsidered local users, andtheir permissions arecontained
+within theWindows 7operating system .
+•Youcanalso have users logging into theWindows 7computer who are
+considered domain users .Default User Accounts Cont.
+14
+4.HomeGroup User
+•The HomeGroup user iscreated bydefault toallow this machine to
+connect toother machines within thesame HomeGroup network .
+•Thisaccount isenabled bydefault .Local Users & Domain Users
+15
+Theusers stored onthelocal computer areknown asLocal Useraccounts .
+Local useraccounts areuseraccounts created inWindows .They exist onlyon
+thelocal computer .Local user accounts arestored intheSecurity Accounts
+Manager (SAM) database .
+The users stored inActive Directory's central database arecalled Domain
+Useraccounts .
+Active Directory isadirectory service that isavailable with theWindows
+Server 2008,Windows Server 2003,andWindows 2000 Server platforms .It
+stores information inacentral database called Active Directory that allows
+users tohave asingle useraccount forthenetwork .Creating & Managing User Accounts
+16
+Creating aLocal User Account
+Logintoyour Windows account .
+Click theStart button andselect Settings (gear icon).
+Click onAccounts andthen select Family &other users from theleft-hand
+menu .
+Select Add someone else tothisPC.
+Select Idon't have this person's sign-ininformation ,andonthenext page,
+select Add auser without aMicrosoft account .
+Enter ausername ,password, password hint,choose security questions and
+then select Next.Creating & Managing User Accounts Cont.
+17
+Changing aLocal UserAccount toanAdministrator Account
+Select Start >Settings >Accounts
+Under Family &other users ,select theaccount owner name, then select
+Change account type.
+Note:Ifyouchoose anaccount that shows anemail address ordoesn't say
+"Local Account ",then you're giving administrator permissions toaMicrosoft
+account, notalocal account .
+Under Account type,select Administrator ,andthen select OK.
+Signinwith thenewadministrator account .
+Creating & Managing User Accounts Cont.
+18
+More Methods toManage UserAccounts …
+Computer Management Tool
+Select Start >Computer Management
+Creating & Managing User Accounts Cont.
+19
+More Methods toManage UserAccounts …
+Command -lineUtilities
+Thecommand -linenet.exeisused formanaging user accounts andsecurity
+groups, inaCommand Prompt window .
+Forfulldetails about thecommands andparameters, type nethelp user |
+more ornethelp localgroup |more .
+Managing User Groups
+20
+Groups areused tologically organise users with similar rights requirements .
+Groups simplify administration because youcanmanage afewgroups rather
+than many useraccounts .
+Forthesame reason, groups simplify troubleshooting .
+Users canbelong toasmany groups asneeded, soit'snotdifficult toputusers
+intogroups thatmake sense foryour organisation .Managing User Groups Cont.
+21
+Tocreate ormanage usergroups…
+GotoStart >Computer Management >Local Users andGroups
+or
+Press  Win + R > Type lusrmgr .msc>Press EnterThank you!
+22

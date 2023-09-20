@@ -1,0 +1,159 @@
+Windows Systems Services 
+By Namal Balasuriya (MCS, BIT , MBCS, MCSSL, SCJP )
+namal.balasuriya@sit.ac.nzLesson Plan
+Introduction
+Importance of Knowing About Services
+Examples for Windows Services
+Windows Services Vs Regular Applications
+Windows Services Control Manager
+Manage Windows Services using Command Line
+Linux Services
+Q&A
+2
+Introduction
+3
+AWindows Service isanapplication that usually serves acore operating
+system function running inthebackground andhasnouserinterface .
+TheWindows operating system makes useofthese applications orservices to
+dowhat anOSdoes, such asmanage network connections, playsound, provide
+filesystem functionality, provide security andauthentication, display colours
+andinteract with theuserthrough theGUI.
+These services canbeautomatically started with theoperating system or
+started manually when specific applications need theservice andcaneven be
+disabled .Butcore services such astheService Control Manager cannot be
+disabled andaccess toitisrestricted totheOSalone .Introduction Cont.
+4
+There arethird-party services thatareinstalled together with theapplications
+thatneed them .
+Eg:Third -party security applications andvirus/malware protection software,
+which install their own constantly running service toactively monitor the
+system, usually eatupvaluable system resources .Importance of Knowing About Services
+5
+Knowing what aservice does orwhen itdoes something canbeuseful .Ifyou
+know youwillnotneed itsfeatures, youcandisable ittospeed upyour
+system .
+Eg:Ifyouhave aRouter installed tomanage your local network, youdonot
+need theInternet Connection Sharing service .Also, ifyouneed aservice to
+run, butit’snotthat important, youcansetittostart alittle later, after
+Windows, startup apps, orother, more critical services arelaunched .
+Services canbedeleted byauserwith administrative privileges, butasdoing
+socanrender theoperating system unstable, itshould bedone only when
+necessary andwith caution .Examples for Windows Services
+6
+Active Directory Service
+Active Directory isaservice Microsoft developed forWindows networks .Itis
+included bydefault inmost Microsoft Windows Server systems .Active
+Directory oversees centralised domain management and identity -related
+functions .
+Prefetch andSuperfetch Service
+Speeds uptheoperating system andapplication startup bycaching toRAM
+frequently used files, libraries andapplication components .Itdoes thisby
+monitoring application usage andbehaviour .Examples for Windows Services Cont.
+7
+Background Intelligent Transfer Service
+This service facilitates controlled, prioritised andasynchronous filetransfer
+between machines viaidlebandwidth .Itplays akeyroleinthedelivery of
+software updates from servers toclients .
+Computer Browser Service
+Itallows users toeasily locate shared resources onneighbouring computers .
+Allinformation isaggregated ononeofthecomputers andother computers
+contact thismachine forinformation onshared resources .Examples for Windows Services Cont.
+8
+DNS Client Service
+This service resolves domain names toIPaddresses andlocally caches this
+data.
+Internet Connection Sharing (ICS) Service
+ICSenables theuseofonedevice connected totheinternet asanaccess point
+forother devices .Access could bethrough Ethernet broadband, cellular
+service oranother gateway .
+Routing andRemote Access Service
+Thisservice makes itpossible tocreate applications thatmanage theremote
+access androuting capabilities oftheWindows operating system .Itallows the
+machine toactasanetwork router .Windows Services Vs Regular Applications
+9
+Launch Mechanism
+Aregular application ismanually launched bytheenduser from theDesktop
+orStart Menu .Windows Services start when themachine isswitched on.But
+regular applications canbeadded totheStartup folder intheStart Menu to
+start automatically once theoperating system startup iscomplete .
+Multiple Instances
+Only oneinstance ofaWindows Service runsonadevice .Regular applications
+canallow multiple copies ifseveral users arelogged intothesame machine .Windows Services Vs Regular Applications Cont.
+10
+User Interface
+Unlike regular applications, Windows Services donothave auserinterface and
+theuser does notdirectly interact with them .AWindows Service does not
+stopwhen auserlogsoffthecomputer, butaregular application will.
+Administrator Rights
+Windows Services usually rununder administrative privileges even when a
+non-administrator user islogged inandusing thecomputer .The average
+Windows Service hasmore control over themachine compared toaregular
+application .Windows Services Control Manager
+11
+Windows Services aremanaged viatheServices Control Manager panel .
+Thepanel shows alistofservices andforeach, name, description, status
+(running, stopped orpaused) andthetype ofservice .
+Double clicking onaservice reveals itsproperties ingreater detail .That
+allows tostop, pause, start, delay start, orresume each service as
+appropriate .
+Wecanalsomodify thestart mechanism (Manual orAutomatic) orspecify an
+account .
+Windows Services broadly fallintothree categories depending ontheactions
+andapplications they control .Local Services, Network Services andSystem
+Services .Windows Services Control Manager Cont.
+12
+Toopen Windows Service Control Manager type services .mscintherunboxor
+Type Services  in then Search  box next to start button .
+Windows Services Control Manager Cont.
+13
+Here, under theName column, there isthelistofServices running onthe
+system, along with their description .Also, their Status (whether they are
+running orstopped), along with theStartup types aredisplayed .
+Startup Type shows howthat service isstarted byWindows .Services canbe
+launched automatically, automatically butwith adelay, manually, orthey can
+bedisabled, which means thatthey arenever started .
+There isanother column Log OnAs.This letstheuser select whether the
+service isstarted using theLocal System account oranother useraccount that
+manually specify .Windows Services Control Manager Cont.
+14
+Tostart orstopaservice, right-click theservice from thecontrol manager and
+select thedesired action from thesubsequent menu .
+Windows Services Control Manager Cont.
+15
+Besides Start andStop, there aresome other options available .Users canalso
+Pause, Resume, orRestart theselected Windows service .
+Theaction youtake isapplied only toyour current computing session .After
+yourestart Windows, theselected service resumes itsdefault state .
+Tochange theStartup Type ofaWindows service, first, open itsProperties by
+right-clicking ontheservice andthen selecting Properties .
+Startup type ofaWindows service…
+▪Automatic -theservice starts atboot time.
+▪Automatic (Delayed Start) -theWindows service starts only after the
+system hasloaded alltheother services settostart automatically .Windows Services Control Manager Cont.
+16
+▪Manual -theWindows service starts onlywhen itisneeded .
+▪Disabled -theservice never starts, even when itsoperation isrequested
+byother Windows services
+Manage Windows Services using Command Line
+17
+Command Prompt canbeused tostart, stop, pause, andresume service .To
+useit,open Command Prompt (Admin) andexecute oneofthefollowing
+commands .
+Tostart aservice :
+netstart [service name]
+Tostopaservice :
+netstop [service name]
+Topause aservice :
+netpause [service name]Manage Windows Services using Command Line
+18
+Toresume aservice :
+netcontinue [service name]
+Todisable aservice :
+scconfig "[service name]" start= disabled
+Itisrecommended that younotchange thedefault settings unless youknow
+what youaredoing, asthiscancause some parts ofyour operating system to
+stopworking .Q&A 
+Time for your questions and queries ...
+19
+Thank you!
+20

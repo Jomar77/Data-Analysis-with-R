@@ -1,0 +1,190 @@
+Computer System Architecture & 
+OS Performance –Part II
+By Namal Balasuriya (MCS, BIT , MBCS, MCSSL, SCJP )
+namal.balasuriya@sit.ac.nzLesson Plan
+Introduction
+Random Access Memory (RAM)
+RAM Types
+Memory Packaging
+Role of RAM in Computer Performance
+Role of Storage Capacity in Computer Performance
+Q&A
+Additional Links
+Activity
+2
+Introduction
+3
+When thecomputer boots, parts oftheoperating system anddrivers are
+loaded intomemory, which allows theCPUtoprocess instructions faster and
+speed uptheboot process .
+After theoperating system isloaded, programs opened bytheuser arealso
+loaded intomemory .Iftoomany programs areopen, thecomputer swaps the
+data inthememory between theRAMandthehard diskdrive .
+Acomputer's performance islargely attributed totheamount ofmemory
+contained within it.Ifacomputer does nothave therecommended memory to
+runtheoperating system anditsprograms, itresults inslower performance .
+Themore memory acomputer has,themore information andsoftware itcan
+loadandprocess quickly .Random Access Memory (RAM)
+4
+RAM istheinternal memory ofthecomputer forstoring data, programs, and
+program results .
+RAMisvolatile .Data stored initislostwhen weswitch offthecomputer orif
+there isapower failure .
+There aretwomain types ofRAM
+•SRAM (Static RAM)
+•DRAM (Dynamic RAM)RAM Types
+5
+RAM Types Cont.
+6
+SRAM (Static RAM)
+SRAM ismade upoffourtosixtransistors .Itkeeps data inthememory aslongas
+power issupplied tothesystem unlike DRAM, which hastoberefreshed
+periodically .
+DRAM (Dynamic RAM)
+DRAM allows tostorage ofeach bitofdata inaseparate capacitor within a
+specific integrated circuit .DRAM needs toberefreshed with voltage regularly .
+Elseitloses theinformation stored onit.RAM Types Cont.
+7
+SRAM DRAM
+The access time of SRAM is low. The access time of DRAM is high.
+It uses flip -flops to store each bit of 
+information.It uses a capacitor to store each bit of 
+information.
+It does not require periodic refreshing to 
+preserve the information.It requires periodic refreshing to preserve 
+the information.
+The cost of SRAM is high. The cost of DRAM is less.
+It has a complex structure. Its structure is simple.
+It requires low power consumption. It requires more power consumption.RAM Types Cont.
+8
+Types ofDRAM
+Synchronous DRAM (SDRAM)
+Synchronises thememory speed with CPU clock speed sothat thememory
+controller knows theexact clock cycle when therequested data willbeready .
+Thisallows theCPUtoperform more instructions atagiven time.Typical SDRAM
+transfers data atspeeds upto133MHz.
+Rambus DRAM (RDRAM)
+Itwaspopular intheearly 2000sandwasmainly used forvideo game devices and
+graphics cards, with transfer speeds upto1GHz.RAM Types Cont.
+9
+Types ofDRAM
+Double Data Rate SDRAM (DDR SDRAM)
+DDRSDRAM isatype ofsynchronous memory that nearly doubles thebandwidth
+ofaSingle Data Rate (SDR) SDRAM running atthesame clock frequency by
+employing amethod called "double pumping," which allows thetransfer ofdata
+onboth therising andfalling edges oftheclock signal without anyincrease in
+clock frequency .
+DDR1SDRAM hasbeen succeeded byDDR2,DDR3,andmost recently, DDR4
+SDRAM .Although operating onthesame principles, themodules arenot
+backward -compatible .Each generation delivers higher transfer rates andfaster
+performance .Memory Packaging
+10
+Memory isavailable invarious physical packaging .
+Single In-Line Memory Module (SIMM)
+These modules were widely used from thelate1980stothe1990sandarenow
+obsolete .
+Dual In-Line Memory Module (DIMM)
+Current memory modules come inDIMMs ."Dual in-line" refers topins onboth
+sides ofthemodules .ADIMM originally hada168-pinconnector supporting a64-
+bitdata bus,which istwice thedata width ofSIMMs .Thewider busmeans that
+more data canpass through aDIMM, translating tofaster overall performance .
+Latest DIMMs based onfourth -generation Double Data Rate (DDR4)SDRAM have
+288-pinconnectors forincreased data throughput .Role of RAM in Computer Performance
+11
+Larger RAMspace translates tomore computing power .
+PCcanbenefit from adding more RAM.
+With increased RAM, theapps canfunction properly without competing for
+workspace .TheOperating System (OS) nolonger needs toperform increased
+code anddata swapping between theresource access memory andthehard
+drive .Swapping isacommon cause ofpoor processing performance .
+Increased RAMenhances theability tomultitask using resource -intensive apps.
+RAMhastwomain attributes thataffect thecomputer's performance .
+•Memory Capacity
+•Memory SpeedRole of RAM in Computer Performance Cont.
+12
+Memory Capacity
+Thenumber ofGBsamemory module hascanincrease theprograms thatcan
+runsimultaneously .
+Butbefore upgrading theRAM, auser must ensure thattheoperating system
+willsupport thenewamount ofmemory .
+Thecapacity ofmemory acomputer canhave depends onthemotherboard
+installed inthecomputer andtheoperating system .
+Most motherboards willsupport either twoorfourmemory modules, butthe
+type andamount ofmemory candiffer widely from onemotherboard to
+another .Role of RAM in Computer Performance Cont.
+13
+Memory Capacity Cont .
+Capacity oftheRAMofacomputer canholddepends ontherunning version of
+theoperating system, which depends ontheCPU.
+Most ofthe32-bitWindows andLinux /Unix operating systems supports upto
+4GBofmemory .
+64-bitsystems support upto128GB.
+Also, Windows 10Pro,Education, andEnterprise allow asmuch as2TB.Role of RAM in Computer Performance Cont.
+14
+Memory Speed
+Theamount oftime that RAM takes toreceive arequest from theprocessor
+andthen read orwrite data.Thefaster theRAM, thefaster theprocessing
+speed .
+Faster RAM increases thespeed atwhich memory transfers information to
+other components which makes thecomputer much more efficient .
+RAM speed ismeasured inMegahertz (MHz), millions ofcycles persecond so
+thatitcanbecompared totheprocessor's clock speed .
+Thespeed oftheprocessor andthebusspeed ofthecomputer motherboard is
+thelimiting factors onthespeed ofRAMinstalled inthecomputer .Role of Secondary Storage in Computer Performance
+15
+Secondary storage orsecondary memory isatype ofcomputer memory thatis
+used tostore data andprograms thatcanbeaccessed orretrieved even after
+thecomputer isturned off.
+Secondary memory isnon-volatile and canstore data and programs for
+extended periods oftime.
+Secondary memory plays animportant roleinmodern computing systems and
+isessential forstoring large amounts ofdata andprograms .
+Thesizeofthehard drive installed inacomputer ismeasured inGigabytes
+(GB) andTerabytes (TB).Role of Secondary Storage in Computer Performance 
+Cont.
+16
+Diskorstorage space affects theoverall performance ofacomputer system .It
+stores theOperating System andother files that acomputer anditsusers
+need.
+Themore space onadisk, thefaster theperformance ofthedisk.Specifically,
+theread/write speed ofadiskisaffected byhowmuch freespace ithas.
+Also, thefree space onacomputer’s diskaffects thespeed ofbooting and
+howfastitcanopen applications .Role of Secondary Storage in Computer Performance 
+Cont.
+17
+Aswecontinue tostore files onadrive, theused space grows toward the
+maximum capacity .
+Hard drive starts splitting files andstoring them wherever itcanonceit’s
+running lowonspace .This results inlowperformance since scattered files
+must allberead from their locations before using them .
+When thediskrunsoutofstorage space, itwon’t beable tostore more files.
+Inaddition, thecomputer willboot slower, open programs slower, andan
+overall slowdown willsetin.
+Inextreme situations, ifthediskpartition where theOSisinstalled becomes
+full,theOSmaynotboot.Role of Secondary Storage in Computer Performance 
+Cont.
+18
+Temporary files affect both used space andfree space onadrive .When
+uninstalling anapplication from thecomputer, itleaves behind some junk
+files.Also, temporary filesandcookies from webbrowsers gather over time.
+These files may behiding indifferent directories foralong time.Some
+temporary filesmayneed third-party applications toscan andremove them .
+Therefore, aslong asthese files remain undetected, they keep affecting the
+available space onastorage drive .Role of Secondary Storage in Computer Performance 
+Cont.
+19
+Normally, 15%to20%freespace should beenough forahard diskdrive .That
+should beenough toprevent anysignificant slowdown intheoperation ofthe
+computer .
+Following actions canhelptorelease more diskspace onthecomputer .
+•Uninstall applications thatarenolonger inuse
+•Delete orbackup unnecessary files
+•Occasionally empty thecomputer’s recycle bin
+•Scan andclean temporary files, cached data, andbrowser cookiesQ&A 
+Time for your questions and queries ...
+20
+Activity
+Discuss about secondary storage devices and their classification.
+21
+Thank you!
+22

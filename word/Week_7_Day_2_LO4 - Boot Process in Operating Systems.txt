@@ -1,0 +1,137 @@
+Boot Process in Operating Systems
+By Namal Balasuriya (MCS, BIT , MBCS, MCSSL, SCJP )
+namal.balasuriya@sit.ac.nzLesson Plan
+What is Boot Process?
+Steps of Booting Process
+Why do we Need Booting?
+Linux Boot Process
+Dual Booting
+Q&A
+2
+What is Boot Process?
+3
+Booting istheprocess ofstarting orresetting thecomputer when theuser
+turns thesystem on.Theprocess includes getting both thehardware and
+software ready andrunning .
+Thebooting process isoftwotypes .
+1.Cold Booting
+Thisprocess happens when acomputer starts upforthefirsttime orwhen it
+isshutdown, and thepower button ispressed tostart thesystem .The
+operating system isautomatically loaded intothesystem during coldbooting
+inthecomputer when themachine reads alltheBIOS (ROM) instructions .
+Compared tohotorwarm booting, coldbooting takes longer .What is Boot Process? Cont.
+4
+2.Warm Booting
+Warm booting isthetechnique ofrestarting analready onsystem without
+completely turning itoff.Inthisprocess, theuserrestarts thesystem viathe
+operating system .
+Computer systems canrestart when they hang orreach astate ofnoresponse .
+Analternative term foritisrebooting .
+Thesystem must berestarted toapply software orhardware configuration
+changes, after installing new software orhardware .Otherwise, itmay
+perform incorrectly orrespond incorrectly .Steps of Booting Process
+5
+Step 1:BIOS isLoaded
+Thefirst step involves turning onthepower .Itpowers theessential parts,
+including theprocessor andBIOS, with electricity .
+Step 2:BIOS :Power onSelf-Test
+ThisisthefirsttestrunbytheBIOS.Additionally, thistestrunsapreliminary
+examination ofthecomputer's main memory, disk drives, input/output
+devices, etc.Moreover, thesystem emits abeep sound incase ofanyerrors .Steps of Booting Process Cont.
+6
+Step 3:Loading ofOS
+The bootable sequence stored inthe CMOS (Common Metal Oxide
+Semiconductor) isread byBIOS following thesuccessful completion ofPOST.
+Based onthebootable sequence, itwilllookfortheMaster Boot Record (MBR)
+onbootable devices such asUSB, CD-ROM, andhard disk.
+Amessage saying "NoBoot Device Found" willbedisplayed, andthesystem
+willcrash ifMBRisnotfound inanyofthem .IfMBR isdiscovered, theBIOS
+willlaunch aunique application software called theBootloader ,which will
+ultimately launch theoperating system .Steps of Booting Process Cont.
+7
+Step 4:System Configuration
+Device drivers areputintothememory after theOSisloaded toensure the
+proper operation ofalldevices .
+Step 5:Loading System Utilities
+Inthisstep, system utilities likeantivirus andvolume control areloaded into
+thememory .Steps of Booting Process Cont.
+8
+Step 6:User Authentication
+The system will prompt theuser toinput their credentials ifanyuser
+authentication isconfigured .Once thesystem hasreceived valid credentials,
+itwilltypically launch theGUIShell ortheCLIShell.Why do we Need Booting?
+9
+Thebooting prevents leaks ofmemory inthesystem .
+Itchecks forupdates andinstalls them .
+RAMisflushed during theprocess .
+Makes small corrections toerrors intheprogram .Linux Boot Process
+10
+Theprocess flow starts with theBIOS, which searches foractive andbootable
+devices .Thesystem boots Linux from thehard disk, inwhich theMBRcontains
+theprimary bootloader .
+TheLinux Boot Process consists ofthree stages .
+1.TheBIOS Stage
+2.TheBootloader Stage
+3.Kernel StageLinux Boot Process Cont.
+11
+TheBIOS Stage
+Thisisthefirststage oftheLinux boot process .
+Itinitialises thesystem hardware during thebooting process .
+TheBIOS retrieves theinformation, stored intheCMOS chip (Complementary
+Metal -Oxide Semiconductor) which isabattery -operated memory chip onthe
+motherboard that contains information about thesystem’s hardware
+configuration .
+BIOS performs aPower -OnSelf-Test(POST) tomake surethatallthehardware
+components ofthesystem areworking .Linux Boot Process Cont.
+12
+TheBIOS Stage Cont .
+Once BIOS confirms thateverything isfine, itstarts searching forthedrive or
+diskwhich contains theoperating system inastandard sequence .
+Ifthefirstlisted device isnotavailable ornotworking, then itchecks forthe
+next oneandsoon.
+Adrive canbebootable onlyifithastheMaster Boot Record initsfirstsector
+known astheboot sector .Thesystem’s hard diskactsastheprimary boot disk
+and theoptical drive works asthesecondary boot disk forbooting the
+operating system from theremovable diskifincase themain hard diskfails.Linux Boot Process Cont.
+13
+TheBootloader Stage
+The bootloader stage includes thetask ofloading theLinux kernel and
+optional initial RAMdisk .Thekernel willhelp enable theCPUtoaccess RAM
+andthedisk.
+Thesecond precursor software isanimage ofatemporary virtual filesystem
+called theinitrd image orinitial RAMdisk .Now, thesystem prepares todeploy
+theactual root filesystem .Itthen detects thedevice that contains thefile
+system andloads thenecessary modules .
+Thelaststepofthebootloader stage istoloadthekernel intothememory .Linux Boot Process Cont.
+14
+Kernel Stage
+Once thecontrol shifts from thebootloader stage totheKernel stage, the
+virtual root filesystem created bytheinitrd image executes theLinuxrc
+program .Thisprogram generates therealfilesystem forthekernel andlater
+removes theinitrd image .
+Thekernel then searches fornew hardware andloads anysuitable device
+drivers found .
+Itthen mounts theactual rootfilesystem andthen performs theinitprocess .
+Theinitreads thefile“/etc/inittab ”anduses thisfiletoload therestofthe
+system daemons .Thisprepares thesystem, andtheuser canloginandstart
+using it.Linux Boot Process Cont.
+15
+Kernel Stage Cont .
+Thetypical bootloaders forLinux areLILO (Linux Loader) andGRUB (Grand
+Unified Bootloader) .These bootloaders allow theuser toselect which OS
+kernel toloadduring boot time.Dual Booting
+16
+Dual booting ofanoperating system istheinstallation oftwo operating
+systems onasingle computer .
+Numerous operating systems canbeinstalled onsuch amachine .Tochoose
+which operating system toboot, abootloader familiar with various file
+systems andoperating systems canoccupy theboot space .
+Once ithasbeen loaded, oneoftheoperating systems onthediskcanbe
+booted .Onthedisk, there maybeseveral partitions, each ofwhich houses a
+different operating system .
+When acomputer system boots intotheoperating system, aboot manager
+program displays amenu sotheusercanchoose theoperating system touse.Q&A 
+Time for your questions and queries ...
+17
+Thank you!
+18

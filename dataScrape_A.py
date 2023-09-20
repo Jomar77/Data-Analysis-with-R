@@ -14,7 +14,7 @@ response = requests.get(url)
 soup = BeautifulSoup(response.content, 'html.parser')
 
 # Find all the article titles on the page
-article_titles = soup.find_all('h3' )
+article_titles = soup.find_all('strong' )
 
 # Loop through the article titles and print them
 list = []

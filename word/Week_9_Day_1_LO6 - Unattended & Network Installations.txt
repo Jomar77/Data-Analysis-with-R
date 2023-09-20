@@ -1,0 +1,84 @@
+Unattended  & Network 
+Installations
+By Namal Balasuriya (MCS, BIT , MBCS, MCSSL, SCJP )
+namal.balasuriya@sit.ac.nzLesson Plan
+Unattended Installation
+Advantages of Unattended Installation
+Disadvantages of Unattended Installation
+Network Installation
+Advantages of Network Installation
+Disadvantages of Network Installation
+Q&A
+2
+Unattended Installation
+3
+Unattended installation (silent  installation)  isaprocedure forinstalling
+software without userintervention .
+Itisapractical method ofautomating deployments when youhave alarge
+number ofclients toinstall, andthecomputers require different hardware
+andsoftware configurations .
+Unattended installations utilise ananswer filetoprovide configuration
+information during theinstallation process .
+Itgives awider range ofconfiguration options andallows thecreation of
+customised installations thatarespecific totheenvironment .Unattended Installation Cont.
+4
+Unattended installations arefaster than attended installations andcanbe
+more consistent when thesame answer fileisused each time.Advantages of Unattended Installation
+5
+Unattended installation saves time andmoney because users donothave to
+interactively respond toeach installation query .
+Itcanbeconfigured toprovide anautomated query response while still
+selectively allowing users toprovide specified input during installations .
+Itcanbeused toinstall clean copies OSorupgrade anexisting operating
+system .
+Itcan beexpanded toinclude installation instructions forapplications,
+additional language support, service packs, anddevice drivers .Disadvantages of Unattended Installation
+6
+Requires more initial setup than astandard installation .
+Someone must have access toeach client computer andmust initiate the
+unattended installation process ontheclient side.Network Installation
+7
+Network Installation (Remote) isaneasy-to-usenetwork application designed
+forcentralised software management andaudit across aNetwork .
+Theprogram allows youtoaudit software installed onremote PCsacross your
+network anddeploy software automatically onremote PCs.
+Theprogram deploys software inparallel onremote PCs, soyoucandeploy
+within afewminutes across theentire network .Network Installation Cont. 
+8
+Network installation canbeagreat asset foravariety ofscenarios, ranging
+from installing software onmultiple computers inalarge organisation tousing
+them oncomputers with limited ornolocal storage .
+Itisalsouseful forupdating orreconfiguring computers remotely, aswell as
+forcomputers with different orspecial hardware orsoftware requirements,
+such asservers, workstations, orgaming systems .Advantages of Network Installation
+9
+Saving time andresources byavoiding theneed tocreate anddistribute
+physical media orcopy filestolocal drives .
+Simplify the management and maintenance ofsoftware updates and
+configurations bycentralising them onthenetwork server .
+Reduce theriskofdata lossorcorruption byminimising theuseofremovable
+orunreliable media orstorage devices .
+Support different types ofhardware andsoftware byallowing customisation
+andflexibility oftheinstallation process .Disadvantages of Network Installation
+10
+Availability andperformance ofthenetwork andserver canaffect thespeed
+andreliability oftheinstallation process .
+Additional configuration andtroubleshooting ofthenetwork andtheboot
+agent mayberequired, which canbecomplex andtime-consuming .
+Security andprivacy risks canbeposed byexposing theinstallation files and
+settings tothenetwork, asthey canbeintercepted ortampered with by
+unauthorised users ordevices .
+Incompatibilities with some legacy orproprietary systems thatdonotsupport
+network booting orrequire specific drivers orsettings .Q&A 
+Time for your questions and queries ...
+11
+Additional Reading
+https://learn.microsoft.com/en -us/answers/questions/571387/how -to-auto-
+setup -windows -10-pro-using -unattended
+https://www.windowscentral.com/how -create -unattended -media -do-
+automated -installation -windows -10
+https://www.windowsafg.com/
+https://www.youtube.com/watch?v=qHHGahJYAvw
+https://www.youtube.com/watch?v=PybAm0TlhRQ12
+Thank you!
+13

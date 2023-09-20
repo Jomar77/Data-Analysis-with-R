@@ -1,0 +1,358 @@
+File Systems
+By Namal Balasuriya (MCS, BIT , MBCS, MCSSL, SCJP )
+namal.balasuriya@sit.ac.nz
+Lesson Plan
+Introduction to File Systems
+Storage Space Management
+Common File Systems
+Q&A
+Additional Links
+Activity
+2
+Introduction to File Systems
+FileSystem isamethod anddata structure thattheoperating system usesto
+control howfilesareplaced logically forstorage andretrieval .
+Thetaskofthefilesystem istomaintain anoptimal filestructure .
+Without afilesystem, information stored willbedifficult toidentify and
+retrieve .
+There aredifferent filesystems inOperating Systems such asWindows, Linux,
+andMacOS .
+Each system iswith unique structure and logic, properties ofspeed,
+flexibility, security, size, andmore .
+3
+Introduction to File Systems Cont.
+Normally operating systems organise filesandfolders inahierarchy .
+4
+Introduction to File Systems Cont.
+Afileisaresource forrecording data onacomputer storage device, primarily
+identified byitsfilename .Afilecanbeawritten document, image, video,
+program, oranyother kindofdata designed fordifferent purposes .Files can
+store multiple types ofdata atonce.Users canopen, read, edit, save, and
+close filesusing computer programs .
+Adirectory /folder isafilesystem cataloging structure that contains
+references toother computer files anddirectories .Files areorganised by
+storing related files inthesame directory .Inahierarchical structure, a
+directory inside another directory iscalled asubdirectory .
+Thetopmost directory insuch astructure, which does nothave aparent ofits
+own, iscalled therootdirectory . 5
+Introduction to File Systems Cont.
+FileMeta Data
+Filemetadata isinformation thatdescribes orrelates toafile,such asitsname,
+size, type, author, location, date created, date modified, lastaccess date, last
+backup, access permission, etc.
+Filemetadata canbeembedded within thefileitself, such asinaPDForan
+image, orstored externally bythefilesystem .
+InUnix-likeoperating systems, astructure called inode canstore metadata
+unrelated tothecontent ofthefileitself .Theinode indexes information by
+number, which canbeused toaccess thelocation ofthefileandthen thefile
+itself .
+6
+Introduction to File Systems Cont.
+FileSystems…
+•Provides I/Osupport foravariety ofstorage device types .
+•Provides interface tousers tohandle fileactivities andsupports multiple
+users inamultiuser systems environment .
+•Minimises thechances oflostordestroyed data.
+•Recovers freespace toreallocate newfilesafter deleting existing files.
+•Assigns diskspace tofilesusing various diskscheduling algorithms .
+•Keeps track ofallthedata locations ofafile.
+7
+Storage Space Management
+Thesurface area ofastorage disk, where itstores data, is
+divided upintocircular tracks which arethen pie-sliced into
+sectors .Each sector hasthesame sizeandhasaunique
+address ordiskblock number .
+Acluster orallocation unit isaunit offilestorage
+management onahard drive inanoperating system andcan
+consist ofone ormore physical sectors .Clusters area
+logical concept used byoperating systems, notaphysical
+characteristic ofahard drive .Acluster need notbe
+physically contiguous onthedisk, itmayspan more than one
+track .
+8
+A = Track
+B = Sector
+C = Sector of a Track
+D = Cluste rStorage Space Management Cont.
+Block Allocation
+Filesystems keep track ofblocks belonging toeach fileandblocks which are
+available foruse.
+When anew fileiscreated, thefilesystem finds anavailable block and
+allocates it.(clusters arecreated inblock allocation)
+When afileisdeleted, thefilesystem makes itsblocks available forre-
+allocation .
+9
+Storage Space Management Cont.
+Block Allocation Cont.
+Thegoals oftheblock allocation system are…
+•Increasing speed ofallocating andfreeing blocks .
+•Minimising space overhead .Thedata structures used bytheallocator
+should besmall while leaving asmuch space aspossible fordata.
+•Minimising fragmentation .
+•Maximising contiguity .Data that islikely tobeused atthesame time
+should bephysically contiguous, ifpossible, toimprove performance .
+10
+Storage Space Management Cont.
+DiskFragmentation
+Fragmentation isanatural occurrence happen because files areconstantly
+being written, deleted, andresized .
+Thesaved modifications forafileareusually stored atadiskdrive location
+thatisdifferent from thatoftheoriginal file.
+Diskfragmentation occurs when afileisbroken upintopieces tofitonthe
+disk.
+When afileisspread outover several locations, ittakes longer toread and
+write resulting inslow computer performance .
+11
+Storage Space Management Cont.
+DiskDefragmentation
+Theprocess ofdefragmentation moves thedata blocks onthehard drive
+around tobring alltheparts ofafiletogether .
+Defragmentation reduces filesystem fragmentation, increasing theefficiency
+ofdata retrieval and thereby improving theoverall performance ofthe
+computer .
+Also, itcleans thestorage andprovides additional storage capacity .
+Most modern operating systems have built-indiskdefragmentation tools that
+perform thedefragmentation process automatically .12
+Storage Space Management Cont.
+DiskFormatting
+Disk formatting isaprocess toconfigure thedata-storage devices before
+initial usage .
+Diskformatting isusually required when anewoperating system isgoing tobe
+used bytheuser.Itisalsodone when there isaspace issue andrequires
+additional space forthestorage ofmore data inthedrives .
+Diskformatting erases existing fileswithin thedisk.
+Wecanperform diskformatting onboth magnetic platter -based hard drives
+andsolid-state drives .
+Diskformatting involves Low-Level Formatting ,Partitioning ,andHigh-Level
+Formatting .13
+Storage Space Management Cont.
+Low-Level Formatting
+Low-level formatting isperformed bythehard diskmanufactures .
+Low level formatting isatype ofphysical formatting that involves making
+cylinders andtracks intheblank hard-disk.Then tracks aredivided into
+sectors .
+Itisimpossible torecover data after low-level formatting .
+This formatting isnot suggested tonormal users .Because low-level
+formatting causes damage tohard diskwhich shortens itslifetime .
+14
+Storage Space Management Cont.
+Partitioning
+Partitioning istheprocess ofdividing thehard diskintooneormore regions .
+Theregions arecalled partitions orvolumes .
+Itcanbeperformed bytheusers, anditwillaffect thediskperformance .
+Atable called partition table /partition map (inDOS, Windows, andMacOS)
+ismaintained onadiskbytheoperating system that outlines anddescribes
+thepartitions onthatdisk.Thistable isknown asadisklabel inUnix /Linux
+systems .
+15
+Storage Space Management Cont.
+High-Level Formatting
+High-Level formatting isdone bytheuser.
+First itclears thedata onhard disk,then generates boot information, then
+willsetup anewfilesystem tothepartition .
+High-Level formatting does notharm thehard disk.Itcanbedone easily with
+aDiskManagement tool.
+This formatting canbeused tofixsome problems likeerrors inthefile
+system, corrupted hard-drive anddeveloping badsectors .
+16
+Storage Space Management Cont.
+First fewblocks onthestorage device always contain critical data about
+partitions .
+Thesystem's firmware uses these data structures toboot uptheoperating
+system onapartition .
+Afirmware islow-level software embedded intoelectronic devices tooperate
+thedevice orbootstrap another program todoit.Firmware exists in
+computers, peripherals, oreven electronic home appliances .
+Firmware provides astandard interface forcomplex software like an
+operating system toboot upandwork with hardware components .
+17
+Storage Space Management Cont.
+Firmware resides onnon-volatile memory, likeaflash ROM attached tothe
+motherboard .
+Hardware manufacturers make firmware based ontwospecifications .
+•Basic Input /Output System (BIOS)
+•Unified Extensible Firmware Interface (UEFI )
+There aretwomain partitioning methods supported bythose twofirmware .
+•Master Boot Record (MBR) Partitioning
+•GUID Partition Table (GPT) Partitioning
+18
+Storage Space Management Cont.
+Master Boot Record (MBR) Partitioning -Supports BIOS-based firmware
+Inthispartitioning method, thefirst sector onthestorage device contains
+essential data toboot upthesystem .Itiscalled MBR.
+MBRcontains thefollowing information :
+•Theboot loader, which isasimple program (inmachine code) toinitiate
+thefirststage ofthebooting process
+•Apartition table, which contains information about your partitions .
+MBRSupports 2types ofpartitions .
+•Primary Partition –Bootable partitions which contain OS
+•Extended Partition –Notbootable19
+Storage Space Management Cont.
+Master Boot Record (MBR) Partitioning -Supports BIOS-based firmware Cont.
+MBRiswidely used andsimple, butithasseveral limitations .
+•MBR's data structure limits thenumber ofpartitions tofour(04).
+•Each partition canbeamaximum of2TB.
+•Thecontent oftheMBRsector hasnobackup .IfMBRgetscorrupted due
+toanunexpected reason, thehardware device becomes useless .
+20
+Storage Space Management Cont.
+GUID Partition Table (GPT) Partitioning -Supports UEFI-based firmware
+TheGPTpartitioning scheme ismore advanced than MBRanddoesn't have the
+limitations ofMBR.
+GPTcanhave asmany partitions astheoperating system allows .
+Also, there isnolimitation tothesizeofthepartition .
+Although MBRisstillwidely supported, GPTisgradually replacing MBR.
+21
+Common File Systems
+FAT(File Allocation Table)
+First introduced in1977 forhard drives .
+FATfilesystem family issupported byalmost alloperating systems forPCs,
+including allversions ofWindows andMS-DOS/PC DOS, OS/2.
+So,theFATfilesystems arewell-suited asauniversal exchange format
+between computers anddevices ofanytype andage.
+Over theyears, thefilesystem hasbeen expanded from FAT12toFAT16and
+FAT32.
+Various features have been added tothefilesystem including subdirectories,
+codepage support, extended attributes, andlongfilenames .22
+Common File Systems
+FAT(File Allocation Table) Cont.
+TheFAT12andFAT16filesystems hadalimit onthenumber ofentries inthe
+rootdirectory ofthefilesystem andhadrestrictions onthemaximum sizeof
+FAT-formatted disks orpartitions .
+FAT32addresses thelimitations ofFAT12andFAT16,except forthefilesize
+limit ofclose to4GB,butitremains limited compared toNTFS.
+FAT12,FAT16,andFAT32also have alimit ofeight characters forthefile
+name, and three characters fortheextension (such as.exe).This is
+commonly referred toasthe8.3filename limit.
+VFAT , anoptional extension toFAT12,FAT16,and FAT32,introduced in
+Windows 95andWindows NT3.5,allowed longfilenames tobestored inthe
+FATfilesystem .23
+Common File Systems Cont.
+NTFS (New Technology FileSystem)
+Thisisajournaling filesystem developed byMicrosoft with theintroduction
+ofWindows NT3.1.
+Ajournaling filesystem isafilesystem that keeps track ofchanges notyet
+committed tothefilesystem's main part byrecording thegoal ofsuch
+changes inadata structure known asa"journal ".Intheevent ofasystem
+crash orpower failure, such filesystems canbebrought back online more
+quickly with alower likelihood ofbecoming corrupted .
+NTFS isthedefault filesystem oftheWindows NTfamily .ItusesMFT(Master
+FileTable) instead ofFATTable .NTFS isthepreferred filesystem onWindows
+andissupported inUnix /Linux aswell.24
+Common File Systems Cont.
+NTFS (New Technology FileSystem) Cont.
+Windows canconvert FAT32/FAT16/FAT12intoNTFS without theneed torewrite all
+files.
+NTFS uses several files hidden from theuser tostore metadata, which canhelp
+improve speed andperformance when reading data.
+NTFS supports…
+•Access Control Lists (ACLs)
+•FileSystem Encryption
+•Transparent Compression
+•Sparse Files
+•FileSystem Journaling25
+Common File Systems Cont.
+exFAT (Extensible FileAllocation Table)
+Introduced byMicrosoft in2006 andoptimised forflash memory such asUSB
+flash drives andSDcards .
+exFAT canbeused where NTFS isnotafeasible solution, andwhen agreater
+filesizethan thestandard FAT32filesystem supports .
+Windows 8andlater versions natively support exFAT boot andsupport the
+installation ofthesystem inaspecial waytorunintheexFAT volume .
+26
+Common File Systems Cont.
+HPFS (High Performance FileSystem)
+Developed byMicrosoft incooperation with IBMandcame tothemarket with
+OS/21.20in1989.
+Thiswasafilesystem forservers thatcould provide much better performance
+when compared toFAT.
+HPFS simply allocates anyfirstfreecluster onthediskforthefilefragment
+andseeks toarrange files incontiguous blocks, oratleast ensure that its
+fragments areplaced maximally close toeach other .
+HPFS hadsignificant limitations andeventually became obsolete .
+Thenative support forithasbeen removed from Windows starting from NT4.27
+Common File Systems Cont.
+ext2,ext3,ext4(Extended FileSystem)
+The“ext”filesystems areLinux's primary filesystems .This isusually the
+default option when installing Linux .ext2israther primitive andext3and
+ext4aremore advanced .
+ext4supports volumes upto1EBandMaximum filesizeis16TB.
+ext4isbackwards compatible with ext2andext3.
+Bydefault, Windows andMacOScannot read extfilesystems .There are
+third-party tools toread extfilesystems from Windows, butNTFS support in
+Linux isbetter than extsupport inWindows .
+RedHatrecommends using XFS(notext4)forvolumes over100TB.28
+Common File Systems Cont.
+HFS(Hierarchical FileSystem)
+Developed byApple forMacOSXin1985.Itisalsoreferred toasMacOS
+Extended .HFSreplaced theoriginal MacOS filesystem .
+HFS+ hasthefollowing properties :
+•Maximum volume sizeis8EB.
+•Files stored inHFS+ partitions canbeaslarge asthepartition .
+•Windows users canread HFS+ butnotwrite .
+•Drivers areavailable that allow Linux users toread andwrite toHFS+
+volumes .
+29
+Common File Systems Cont.
+XFS
+XFSisahigh-performance open-source filesystem that wasinitially created
+bySilicon Graphics .
+In2001,itwasmerged intotheLinux kernel andisnowsupported bymost
+Linux distributions andiseven used asthedefault filesystem forsome Linux
+distributions .
+XFSsupports large filesandlarge filesystems .
+XFSdeploys thejournaling principle foranyupdates toitsmetadata .All
+changes arewritten totheJournal firstbefore theactual blocks getmodified,
+which enables itsinstant recovery incase ofanycorruption .
+30
+Common File Systems Cont.
+ReFS (Resilient FileSystem)
+ReFS isMicrosoft's newest filesystem (codenamed "Protogon"), designed to
+maximise data availability, scale efficiently tolarge datasets across diverse
+workloads, andprovide data integrity bymeans ofresiliency tocorruption .
+Introduced in2012 with Windows Server 2012.Thetechnology nowisincluded
+inWindows 8&10.
+ReFS isafault-tolerant technology thatcame toreplace NTFS.Wasdesigned
+toeliminate theshortcomings ofthepredecessor andreduce theamount of
+information thatmaybelostduring various operations .Supports working with
+large files.
+31
+Common File Systems Cont.
+APFS (Apple FileSystem)
+Thisisaproprietary filesystem developed anddeployed byApple Inc.forthe
+newversions ofmacOS, iOS,andtheir other OSs.
+Itaims tofixthecore problems ofHFS+.
+APFS features strong encryption, space sharing, snapshots, fast directory
+sizing, andimproved filesystem fundamentals .
+32
+Common File Systems Cont.
+UFS(Unix FileSystem)
+TheUnix filesystem isahierarchical filesystem used byUnix-based operating
+systems tostore andorganise filesanddirectories .
+Itisatree-likestructure that starts with asingle directory called theroot
+directory, which isdenoted byaforward slash (/)character .
+Unix filesystem alsouses asetofpermissions tocontrol access tofiles and
+directories .
+Each fileanddirectory have anowner andagroup associated with it,and
+permissions canbesettoallow orrestrict access tothese entities .
+33
+Common File Systems Cont.
+34
+Operating System File Systems Supported
+DOS FAT12, FAT16
+Windows FAT , NTFS, exFAT , ReFS, HPFS
+Linux ext2, ext3, ext4, XFS, Linux Swap(FAT16, FAT32 , NTFS)
+MacOS HFS, HFS+, APFS, FAT , exFATQ&A 
+Time for your questions and queries ...
+35
+Additional Links
+https://www.ufsexplorer.com/articles/file -systems -basics/
+https://www.indeed.com/career -advice/career -development/common -file-
+systems
+36
+Activity
+Find differences between BIOS and UEFI.
+Explore more about file systems that are not discussed in the lesson.
+37
+Thank you!
+38

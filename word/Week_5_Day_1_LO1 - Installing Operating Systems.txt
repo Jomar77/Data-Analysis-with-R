@@ -1,0 +1,229 @@
+Installing Operating Systems 
+By Namal Balasuriya (MCS, BIT , MBCS, MCSSL, SCJP )
+namal.balasuriya@sit.ac.nzLesson Plan
+Preparation to Install
+Selecting an OS
+Types of Installations
+Device Drivers
+Types of Device Drivers
+Virtual Device Drivers
+Q&A
+2
+Preparation to Install 
+3
+Before selecting theoperating system toinstall following decisions must be
+taken…
+Upgrade oraFresh Installation
+Physical Computer orVirtual Machine (VM)
+Client orServer(Computer’s Role)
+FewComputers orHundreds ofComputers
+Environment Eg:Network EnvironmentSelecting an OS
+4
+Considering theextensive range ofOSavailable inthemarket, itisessential
+tounderstand theunique needs ofthedevice .
+Doing this enhances theworking experience onacomputer and boosts
+productivity .
+Asound operating system willalways impact everything running onadevice .
+Without theright OS,hardware isofnovalue, nomatter howadvanced itis.
+So,choose theOSasperuserrequirements .Selecting an OS
+5
+Check forHardware Configuration orSetup oftheComputer
+•CPUArchitecture andSpeed
+•RAMSpeed
+•Free DiskSpace
+•Network Connection
+•Etc.
+Existing computer hardware should becompatible with the minimum
+requirements fortheoperating system .Otherwise, thehardware should be
+upgraded tomatch theOSrequirements .
+Alsoensure theexisting software operating correctly .Selecting an OS
+6
+Consider theBasic Design oftheComputer
+Eg:HP ,IBM,oranApple Computer
+Operating system should becompatible with thetype ofcomputer .
+Alsolookfortheapplications intended toinstall onthecomputer .Selecting an OS Cont.
+7
+OSshould have thePower toManage theMemory
+Memory management isanimportant consideration when selecting an
+operating system .
+Apowerful operating system iscapable ofhandling andmanaging integral
+memory .Itkeeps track ofevery memory location, regardless ofwhether itis
+assigned toaprocess orisfree.Asaresult, thedata imported from secondary
+memory tomain memory isaccurate, available, andconsistent .There are
+various operating systems onthemarket today notorious formemory hogs.So,
+hunt forsoftware thathandles memory flawlessly .Selecting an OS Cont.
+8
+Robust &Stable OS
+Thisisoneofthemost crucial factors when buying anOS.
+Ifthecomputer often uses toaccess theInternet, forbusiness purposes, or
+playgames, itrequires anOSthatisreliable anddependable .
+OSshould efficiently handle allitsfunctions without crashing .
+With anunstable operating system, thesystem willrequire toberebooted
+constantly .Selecting an OS Cont.
+9
+Choose OSthat meets allBoard Support Package (BSP) Requirements
+Operating systems aresoftware thatperforms allthebasic tasks, including all
+fundamental functions, managing files, memory, processes, input andoutput,
+andperipheral devices likeprinters anddiscdrives .
+BSPissomething thatmade itallpossible .
+Iftheselected OSdoes notsupport BSP ,it’snotworth buying one.Selecting an OS Cont.
+10
+Avoid Memory Leak
+Amemory leak isabugthat canimpair theoverall functionality ofan
+operating system andaspecific program onacomputer .
+Intheworst -case scenario, thecomputer’s operating system crashes dueto
+thevastdata storage .
+Toavoid such athing, users should lookforanoperating system thatisfreeof
+allmemory leaks .This willenhance theoverall working experience ona
+computer .Selecting an OS Cont.
+11
+Good Memory -Sharing Capabilities
+Good memory -sharing capabilities make transferring data easier between
+various computer processes through modules andscripts .
+Also, thisprocess makes communication faster andeasier than anyother
+message -sending module .
+Iftheselected operating system lacks good memory sharing, itcandelay other
+processes andgiverisetovarious problems forusers andcomputers .Selecting an OS Cont.
+12
+Check allSafety Requirements
+Thisisthething thatsaves thecomputer anddata from threats likehacking,
+fraud, andscamming .
+Linux andMacoperating systems arethought tobethesafest forbusiness,
+online banking, andstoring sensitive data.Those reduce thepossibility of
+hacking, duplicity, andfraud .
+Windows hasfewer security safeguards, which increases thelikelihood that
+hackers willsucceed inbreaking intothemachine .Selecting an OS Cont.
+13
+Security
+Alloperating systems aresusceptible toviruses, butasWindows hasa
+significant market share, itistargeted bythemost viruses .
+Incontrast, Linux -based operating systems likeUbuntu orDebian aretheleast
+receptive .
+Macs arealsovulnerable toransomware explicitly created forMacs.Selecting an OS Cont.
+14
+Cost &Support
+There isacommon belief thatthemore youpayforanOS,thebetter support
+andexperience youwillget.
+Thisisnotalways correct assometimes users cangetthebest experience at
+thelowest price .That toowith reliable, lightweight, andvery good memory
+management .
+Look fortheUpdated Version OS
+Even iftheoperating system isunfamiliar, itisbetter tolookfortherecently
+updated operating system .Types of Installations
+15
+Clean Install
+Acompletely new installation ofanoperating system orapplication ona
+computer .
+Inaclean install ofanOS,thehard diskisformatted andcompletely erased .
+Installing anOSonanew computer orinstalling anapplication forthefirst
+time isautomatically aclean install .
+Insome cases, aclean install isnotnecessary when upgrading your operating
+system .Itismuch easier andsafer toperform astandard “Upgrade and
+Install,” which simply upgrades thenecessary filesandleaves theuserfilesin
+place .Types of Installations Cont.
+16
+Clean Install Cont .
+However, sometimes anOSupgrade isnotpossible because important files
+have become lostorcorrupted .Inthiscase, aclean install maybetheonly
+option .
+Some users may alsoprefer toperform aclean install sothat nolingering
+problems from theprevious OSwillaffect thenewly installed operating
+system .
+Windows, MacOSX,andLinux allow youtoperform aclean install when
+upgrading theoperating system .
+Theinstaller willgiveyouthechoice between astandard upgrade (typically
+thedefault option) and aclean installation near thebeginning ofthe
+installation process .Types of Installations Cont.
+17
+Repair Install
+Iftheinstalled OSisacting upormisbehaving, itispossible toperform a
+reinstallation ofthesame OSthat keeps allfiles, documents, data, settings,
+andapps intact .
+Reinstalling does notformat your PCandcanbeused tocorrect problems with
+missing DLLerrors, failed System FileChecker (SFC) scans, theStart Menu
+doesn’t work, andmore .Types of Installations Cont.
+18
+In-Place Upgrade
+The installation ofanoperating system orapplication onthecomputer
+without removing theolder version firstandwithout saving anydata beyond
+normal precautions .
+In-place installations ofoperating systems have atendency tocause problems,
+especially ifthenewversion isverydifferent from theprevious one.
+Forexample, in-place upgrades arerecommended when migrating from
+Windows Vista toWindows 7,butnotfrom Windows XP.Inthatcase, a“Clean
+Install” isrecommended, whereby alluserdata must besaved externally and
+restored after theinstallation, andallapplications must bere-installed .Types of Installations Cont.
+19
+Unattended Installations
+AnUnattended Installation isanautomated installation technology that you
+canusetoinstall with nouserintervention .
+Unattended installation istypically used during large -scale rollouts when it
+would betoo slow and costly tohave administrators ortechnicians
+interactively install theOperating System /Software onindividual computers .Types of Installations Cont.
+20
+Multi -boot
+Dual-boot isaterm used todescribe acomputer that utilises twooperating
+systems .
+Forexample, with adual-boot youcould have Windows 10andLinux onthe
+same machine .Theconcept ofinstalling more than twooperating systems is
+referred toasamulti -boot.
+The interest indual-booting exists because thereisn’t aone-size-fits-all
+solution tooperating systems .While anymodern OSwillcover theaverage
+person’s day-to-daycomputer needs, forthose who need tousespecialised
+programs orwant totrymore experimental operating systems without
+sacrificing their computer usability, dual-booting offers aflexible solution .Types of Installations Cont.
+21
+Remote /Network Installation
+Remote /Network Installation isaneasy-to-usenetwork application designed
+forcentralised software management andaudit across aNetwork .
+Theprogram allows youtoaudit software installed onremote PCsacross your
+network anddeploy software automatically onremote PCs.
+Theprogram deploys software inparallel onremote PCs, sousers candeploy
+within afewminutes across theentire network .Device Drivers
+22
+Adevice driver isacomputer program that operates orcontrols aparticular
+type ofdevice thatisattached toacomputer .
+Adriver provides asoftware interface tohardware devices, enabling operating
+systems andother computer programs toaccess hardware functions without
+needing toknow precise details about thehardware being used.
+Device drivers areessential foracomputer system towork properly because,
+without adevice driver, theparticular hardware fails towork accordingly,
+which means itfailsindoing thefunction/action itwascreated todo.Device Drivers Cont.
+23
+Device Drivers Cont.
+24
+Hardware devices thatareunknown bytheoperating system orhave features
+unknown bytheoperating system allrequire drivers .
+Eg:Card Reader, Controller, Modem, Motherboard Chipset, Network Card,
+Printer, Scanner, Sound Card, Tape Drive, USBDevices, Video Card, etc.
+Modern operating systems have many generic drivers that allow hardware to
+work atabasic level without needing drivers orsoftware .Butifthat device
+hasfeatures unknown totheoperating system, itwillnotwork without
+drivers .
+Eg:CPU, DiscDrive, Fan, Hard Drive, Heat Sink, Joystick, Keyboard, Mouse,
+Monitor, Power Supply, RAM, Speakers, UPS, etc.Types of Device Drivers
+25
+Kernel -Mode Device Drivers
+ThisKernel -Mode device driver includes some generic hardware that loads with
+theoperating system aspart oftheOSthese areBIOS, motherboard, processor,
+andsome other hardware that arepart ofkernel software .These include the
+minimum system requirement device drivers foreach operating system .
+User -Mode Device Drivers
+Other than thedevices which arebrought bythekernel forworking thesystem
+theuseralsobrings some devices foruseduring theuseofasystem thatdevices
+need device drivers tofunction those drivers fallunder theUser-Mode device
+driver .Forexample, theuser needs anyplug-and-play action that comes under
+this.Virtual Device Drivers
+26
+There arealso Virtual Device Drivers (VxD), which manage thevirtual
+machine/device .
+Sometimes weusethesame hardware virtually atthat time virtual driver
+controls/manages thedata flow from thedifferent applications used by
+different users tothesame hardware .
+InMicrosoft Windows, adevice driver iscontrolled bytheOperating System’s
+Virtual Device Driver Manager (VDDM) and isshared bytheapplications
+running within thatkernel .Q&A 
+Time for your questions and queries ...
+27
+Thank you!
+28
